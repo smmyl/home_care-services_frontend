@@ -12,6 +12,15 @@ const App = () => {
   
   return (
     <>
+    {/* <nav className='navbar'>
+      <ul>
+        <li><a href='#' id=''>Home</a></li>
+        <li><a href='#' id=''>Sign Up</a></li>
+        <li><a href='#' id=''>Workers</a></li>
+        <li><a href='#' id=''>Clients</a></li>
+        <li><a href='#' id=''>Contact</a></li>
+      </ul>
+    </nav> */}
       <Home/>
       <Members/>
       <Profile/>

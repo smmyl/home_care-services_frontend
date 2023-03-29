@@ -4,8 +4,8 @@ import EditMember from './members/Edit'
 import AddMember from './members/Add'
 
 const Members = () => {
-    const[members, setMembers] = useState([])
-    //==Get Data
+const[members, setMembers] = useState([])
+    // ==Get Data
     const getMembers = () => {
         axios.get('http://localhost:3000/members').then((response) => {
             setMembers(response.data)
