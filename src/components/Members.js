@@ -3,9 +3,8 @@ import {useState, useEffect} from 'react'
 import EditMember from './members/Edit'
 import AddMember from './members/Add'
 
-const[members, setMembers] = useState([])
-
 const Members = () => {
+    const[members, setMembers] = useState([])
     //==Get Data
     const getMembers = () => {
         axios.get('http://localhost:3000/members').then((response) => {

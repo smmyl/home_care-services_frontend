@@ -3,9 +3,8 @@ import {useState, useEffect} from 'react'
 import EditWorker from './workers/Edit'
 import AddWorker from './workers/Add'
 
-const[workers, setWorkers] = useState([])
-
 const Workers = () => {
+    const[workers, setWorkers] = useState([])
     //==Get Data
     const getWorkers = () => {
         axios.get('http://localhost:3000/workers').then((response) => {
