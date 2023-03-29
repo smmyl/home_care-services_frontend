@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-import EditWorkers from './workers/Edit'
-import AddWorkers from './workers/Add'
+import EditWorker from './workers/Edit'
+import AddWorker from './workers/Add'
 
 const[workers, setWorkers] = useState([])
 
@@ -26,8 +26,8 @@ const Workers = () => {
   return (
     <>
         <h1>Workers</h1>
-        <AddWorkers/>
-        <EditWorkers/>
+        <AddWorker/>
+        <EditWorker/>
     </>
   )
 }

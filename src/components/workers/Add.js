@@ -1,13 +1,13 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
-const AddWorkers = (props) => {
+const AddWorker = (props) => {
 
     return (
         <>
-            <h1>Home</h1>
+            <h1>Add Worker</h1>
         </>
     )
 }
 
-export default AddWorkers
+export default AddWorker

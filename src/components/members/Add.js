@@ -1,13 +1,13 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
-const AddMembers = (props) => {
+const AddMember = (props) => {
 
     return (
         <>
-            <h1>Home</h1>
+            <h1>Add Member</h1>
         </>
     )
 }
 
-export default AddMembers
+export default AddMember

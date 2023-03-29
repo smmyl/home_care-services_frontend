@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-import EditMembers from './members/Edit'
-import AddMembers from './members/Add'
+import EditMember from './members/Edit'
+import AddMember from './members/Add'
 
 const[members, setMembers] = useState([])
 
@@ -26,8 +26,8 @@ const Members = () => {
     return (
         <>
             <h1>Members</h1>
-            <AddMembers/>
-            <EditMembers/>
+            <AddMember/>
+            <EditMember/>
         </>
     )
 }
