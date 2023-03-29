@@ -1,6 +1,6 @@
 # Overview
 What app does
 # Planning
-https://miro.com/app/board/uXjVMYaNHYY=/?share_link_id=229765662030
+[link to Miro](https://miro.com/app/board/uXjVMYaNHYY=/?share_link_id=229765662030)
 # BackEnd
-https://github.com/smmyl/home_care_services_backend
+[link to backend github](https://github.com/smmyl/home_care_services_backend)
