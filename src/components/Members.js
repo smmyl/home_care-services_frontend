@@ -5,6 +5,8 @@ import AddMember from './members/Add'
 
 const Members = () => {
 const[members, setMembers] = useState([])
+const[add, setAdd] = useState(false)
+
     // ==Get Data
     const getMembers = () => {
         axios.get('http://localhost:3000/members').then((response) => {
@@ -21,12 +23,36 @@ const[members, setMembers] = useState([])
         })
     }
 
+    const addMember = () => {
+        setAdd(!add)
+    }
+
+    useEffect(() => {
+       getMembers()
+    }, [])
 
     return (
         <>
             <h1>Members</h1>
-            <AddMember/>
-            <EditMember/>
+            {add ?
+            <>
+                <h2>Sign Up</h2>
+                <button onClick = {addMember}>Go Back</button>
+                <AddMember
+                addMember = {addMember}
+                getMembers = {getMembers}
+                />
+            </>
+            :
+            <>
+                <h2>Current Members</h2>
+                <button onClick = {addMember}>Sign Up</button>
+                <EditMember
+                handleDeleteMember = {handleDeleteMember}
+                getMembers = {getMembers}
+                />
+            </>
+            }   
         </>
     )
 }
