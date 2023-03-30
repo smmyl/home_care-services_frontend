@@ -9,7 +9,7 @@ const Members = (props) => {
     }
 
     return (
-        <>
+        <div class='page'>
             <h1>Members</h1>
             {props.members.map((member) => {
                 return(
@@ -62,7 +62,7 @@ const Members = (props) => {
                 </div>
                 )
             })}
-        </>
+        </div>
     )
 }
 export default Members
