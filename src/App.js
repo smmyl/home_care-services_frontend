@@ -148,7 +148,8 @@ const App = () => {
         />
       ) : null}
       {clickContact ? <Contact /> : null}
-      {clickLogin ? <Login getMembers={getMembers} /> : null}
+      {clickLogin ? <Login getMembers={getMembers} 
+      showMembers={showMembers} /> : null}
     </>
   );
 };
