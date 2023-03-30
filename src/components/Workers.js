@@ -1,7 +1,6 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import EditWorker from './workers/Edit'
-import AddWorker from './workers/Add'
 
 const Workers = () => {
     const[workers, setWorkers] = useState([])
@@ -25,7 +24,6 @@ const Workers = () => {
   return (
     <>
         <h1>Workers</h1>
-        <AddWorker/>
         <EditWorker/>
     </>
   )

@@ -6,6 +6,7 @@ import Members from './components/Members'
 import Profile from './components/Profile'
 import Workers from './components/Workers'
 import Contact from './components/Contact'
+import Login from './components/Login'
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
       <Profile/>
       <Workers/>
       <Contact/>
+      <Login/>
     </>
   )
 }

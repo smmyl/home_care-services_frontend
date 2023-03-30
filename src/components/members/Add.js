@@ -39,7 +39,7 @@ const AddMember = (props) => {
     //==Send data to MONGO
     const handleAddMember = (event) => {
         event.preventDefault()
-        axios.post('http://localhost:3000/homecare', {
+        axios.post('http://localhost:3000/members', {
             name: name,
             age: age,
             language: language,
@@ -58,7 +58,7 @@ const AddMember = (props) => {
 
     return (
         <>
-            <h2>Add Member</h2>
+            <h3>Add Member</h3>
             <form onSubmit = {handleAddMember}>
                 <label htmlFor='name'>Name:</label>
                 <input type='text' name='name' onChange = {handleName} />

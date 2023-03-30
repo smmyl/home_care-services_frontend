@@ -1,12 +1,14 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import EditMember from './members/Edit'
-import AddMember from './members/Add'
 
 const Members = () => {
-const[members, setMembers] = useState([])
-const[add, setAdd] = useState(false)
+    const[members, setMembers] = useState([])
+    const[edit, setEdit] = useState(false)
 
+    const toggleEdit = () => {
+        setEdit(!edit)
+    }
     // ==Get Data
     const getMembers = () => {
         axios.get('http://localhost:3000/members').then((response) => {
@@ -23,10 +25,6 @@ const[add, setAdd] = useState(false)
         })
     }
 
-    const addMember = () => {
-        setAdd(!add)
-    }
-
     useEffect(() => {
        getMembers()
     }, [])
@@ -34,26 +32,23 @@ const[add, setAdd] = useState(false)
     return (
         <>
             <h1>Members</h1>
-            {add ?
-            <>
-                <h2>Sign Up</h2>
-                <button onClick = {addMember}>Go Back</button>
-                <AddMember
-                addMember = {addMember}
-                getMembers = {getMembers}
-                />
-            </>
-            :
-            <>
-                <h2>Current Members</h2>
-                <button onClick = {addMember}>Sign Up</button>
+            {members.map((member) => {
+            {edit ?
                 <EditMember
                 handleDeleteMember = {handleDeleteMember}
                 getMembers = {getMembers}
-                />
-            </>
-            }   
-        </>
+                member = {member}
+                /> 
+                :
+                <>
+                    return(
+                        <>
+                            <p>Name:{member.name}</p> 
+                        </>
+                    )
+                </>
+            }})}
+    </>
     )
 }
 export default Members
