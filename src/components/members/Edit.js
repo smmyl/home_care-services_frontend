@@ -57,7 +57,7 @@ const EditMember = (props) => {
     return (
         <>
             <h2>Edit Member</h2>
-            <form onSubmit = {handleEdit}>
+            <form id = 'editMemberForm' onSubmit = {handleEdit}>
                 <label htmlFor='name'>Name:</label>
                 <input type='text' name='name' onChange={handleNameUpdate} />
                 <br/>
@@ -78,8 +78,10 @@ const EditMember = (props) => {
                 <input type='text' name='address' onChange={handleAddressUpdate} />
                 <br/>
                 <br/>
-                <input type="submit" value="Add Worker"/>
             </form>
+            <button type = 'submit' form = 'editMemberForm'>Update</button>
+            <button onClick = {() => {props.handleDeleteMember(props.member)}}>Delete</button>
+            <button onClick = {() => {props.toggleEdit()}}>Cancel</button>
         </>
     )
 }

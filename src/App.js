@@ -9,8 +9,26 @@ import Contact from './components/Contact'
 import Login from './components/Login'
 
 const App = () => {
+  const[members, setMembers] = useState([])
+  const[workers, setWorkers] = useState([])
 
-  
+  // ==Get Data
+  const getMembers = () => {
+      axios.get('http://localhost:3000/members').then((response) => {
+          setMembers(response.data)
+      })
+  }
+  const getWorkers = () => {
+    axios.get('http://localhost:3000/workers').then((response) => {
+        setWorkers(response.data)
+    })
+  }
+
+  useEffect(() => {
+    getMembers()
+    getWorkers()
+  }, [])
+
   return (
     <>
     {/* <nav className='navbar'>
@@ -23,11 +41,21 @@ const App = () => {
       </ul>
     </nav> */}
       <Home/>
-      <Members/>
+      <Members
+        getMembers = {getMembers}
+        setMembers = {setMembers}
+        members = {members}
+      />
       <Profile/>
-      <Workers/>
+      <Workers
+        getWorkers = {getWorkers}
+        setWorkers = {setWorkers}
+        workers = {workers}
+      />
       <Contact/>
-      <Login/>
+      <Login
+        getMembers = {getMembers}
+      />
     </>
   )
 }
