@@ -36,8 +36,13 @@
     transform: rotate(360deg);
   }
 }
-
-
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+/* Everything */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+/* NavBar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -52,7 +57,6 @@
 }
 
 .navbar ul li {
-  font-family: century;
   font-size: 1rem;  
 }
 
@@ -60,4 +64,24 @@
   text-decoration: none;
   color: black;
   padding: 8px 25px;
+}
+/* Every Page */
+.page {
+  margin: 20px;
+}
+/* Title */
+.company-title {
+  margin: 20px;
+}
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+}
+.title-cont {
+  width: 30%;
+  background-color: rgb(108, 182, 242);
+}
+.nav-cont {
+  width: 70%;
 }

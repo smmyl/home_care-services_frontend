@@ -20,7 +20,7 @@ const Workers = (props) => {
 
 
   return (
-    <>
+    <div class='page'>
         <h1>Workers</h1>
         {props.workers.map((worker) => {
             return(
@@ -44,7 +44,7 @@ const Workers = (props) => {
                 }
                 </>)
         })}
-    </>
+    </div>
     )
 }
 export default Workers
