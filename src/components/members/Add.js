@@ -56,7 +56,42 @@ const AddMember = (props) => {
 
     return (
         <>
-            <h1>Add Member</h1>
+            <h3>Add Member</h3>
+            <form onSubmit = {handleAddMember}>
+                <label htmlFor='name'>Name:</label>
+                <input type='text' name='name' onChange = {handleName} />
+                <br/>
+                <br/>
+                <label htmlFor='age'>Age:</label>
+                <input type='number' name='age' onChange={handleAge} />
+                <br/>
+                <br/>
+                <label htmlFor='familyMember'>Main Contact:</label>
+                <input type='text' name='familyMember' onChange={handleFamilyMember} />
+                <br/>
+                <br/>
+                <label htmlFor='language'>Language:</label>
+                <input type='text' name='language' onChange={handleLanguage} />
+                <br/>
+                <br/>
+                <label htmlFor='address'>Address:</label>
+                <input type='text' name='address' onChange={handleAddress} />
+                <br/>
+                <p>Services:</p>
+                <label htmlFor='clean'>Cleaning:</label>
+                <input type='checkbox' name='clean' value = 'true' onChange={handleClean}/>
+                <br/>
+                <br/>
+                <label htmlFor='clean'>Food Delivery:</label>
+                <input type='checkbox' name='clean' value = 'true' onChange={handleFood}/>
+                <br/>
+                <br/>
+                <label htmlFor='watch'>Monitor:</label>
+                <input type='checkbox' name='watch' value = 'true' onChange={handleWatch}/>
+                <br/>
+                <br/>
+                <input type="submit" value="Sign Up"/>
+            </form>
         </>
     )
 }
