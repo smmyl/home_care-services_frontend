@@ -26,6 +26,8 @@ const Workers = (props) => {
             return(
                 <>
                 {edit ?
+                    <>
+                    <h2>Edit</h2>
                     <EditWorker
                         handleDeleteWorker = {handleDeleteWorker}
                         getWorkers = {props.getWorkers}
@@ -33,6 +35,7 @@ const Workers = (props) => {
                         toggleEdit = {toggleEdit}
                         setEdit = {setEdit}
                     /> 
+                    </>
                     :
                     <>
                         <p>Name:{worker.name}</p>
