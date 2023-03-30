@@ -2,29 +2,39 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 
 const EditWorker = (props) => {
+    const [newName, setNewName] = useState()
+    const [newAge, setNewAge] = useState()
+    const [newLanguage, setNewLanguage] = useState()
+    const [newImage, setNewImage] = useState()
+
+    const handleNameUpdate = (event) => {
+        setNewName(event.target.value)
+    }
+    const handleAgeUpdate = (event) => {
+        setNewAge(event.target.value)
+    }
+    const handleLanguageUpdate = (event) => {
+        setNewLanguage(event.target.value)
+    }
+    const handleImageUpdate = (event) => {
+        setNewImage(event.target.value)
+    }
+
+    const handleEdit = (event) => {
+        event.preventDefault()
+        axios.put(`http://localhost:3000/workers/${props.worker._id}`, {
+            name: newName,
+            age: newAge,
+            language: newLanguage,
+            image: newImage
+        }).then (() => {
+            props.getWorkers()
+        })
+    }
 
     return (
         <>
             <h1>Edit Worker</h1>
-            <form onSubmit={}>
-                <label htmlFor='name'>Name:</label>
-                <input type='text' name='name' onChange={} value={worker.name}/>
-                <br/>
-                <br/>
-                <label htmlFor='age'>Age:</label>
-                <input type='number' name='age' onChange={} value={worker.age}/>
-                <br/>
-                <br/>
-                <label htmlFor='language'>Language:</label>
-                <input type='text' name='language' onChange={} value={worker.language}/>
-                <br/>
-                <br/>
-                <label htmlFor='image'>Image:</label>
-                <input type='text' name='image' onChange={} value={worker.image}/>
-                <br/>
-                <br/>
-                <input type="submit" value="Edit Worker"/>
-            </form>
         </>
     )
 }

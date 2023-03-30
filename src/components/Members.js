@@ -1,32 +1,67 @@
-import axios from 'axios'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import EditMember from './members/Edit'
-import AddMember from './members/Add'
 
-const Members = () => {
-const[members, setMembers] = useState([])
-    // ==Get Data
-    const getMembers = () => {
-        axios.get('http://localhost:3000/members').then((response) => {
-            setMembers(response.data)
-        })
+const Members = (props) => {
+    const[edit, setEdit] = useState(false)
+
+    const toggleEdit = () => {
+        setEdit(!edit)
     }
-
-    //==Delete Function for Data
-    const handleDeleteMember = (data) => {
-        axios.delete(`http://localhost:3000/members/${data._id}`).then(() => {
-        axios.get('http://localhost:3000/members').then((response) => {
-            setMembers(response.data)
-            })
-        })
-    }
-
 
     return (
         <>
             <h1>Members</h1>
-            <AddMember/>
-            <EditMember/>
+            {props.members.map((member) => {
+                return(
+                <div>
+                    {edit ?
+                        <>
+                        <h2>Edit</h2>
+                        <EditMember
+                            setMembers = {props.setMembers}
+                            getMembers = {props.getMembers}
+                            member = {member}
+                            toggleEdit = {toggleEdit}
+                            setEdit = {setEdit}
+                        /> 
+                        </>
+                        :
+                        <>
+                            <h4>{member.name}</h4>
+                            <p>Age: {member.age}</p>
+                            <p>Family Members: {member.familyMember}</p>
+                            <p>Languages: {member.language}</p>
+                            <p>Address: {member.address}</p>
+                            <p>Services Needed:</p>
+                            {member.clean ?
+                                <>
+                                    <p>Cleaning</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
+                            {member.food ?
+                                <>
+                                    <p>Food Delivery</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
+                            {member.watch ?
+                                <>
+                                    <p>Monitor</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
+                            <button onClick = {() => {toggleEdit()}}>Edit</button>
+                        </>}
+                </div>
+                )
+            })}
         </>
     )
 }
