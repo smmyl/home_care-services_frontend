@@ -37,7 +37,7 @@
   }
 }
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 /* Everything */
 body {
   font-family: 'Nunito', sans-serif;
@@ -49,39 +49,134 @@ body {
   position: sticky;
   top: 0;
 }
-
 .navbar ul {
   display: flex;
   list-style: none;
-  margin: 20px 0px;
+  margin: 40px 0px;
 }
-
 .navbar ul li {
-  font-size: 1rem;  
+  font-size: 1rem; 
+  font-weight: bold; 
 }
-
 .navbar ul li a {
   text-decoration: none;
   color: black;
   padding: 8px 25px;
 }
-/* Every Page */
-.page {
-  margin: 20px;
+.navbar ul li a:hover {
+  color: rgb(108, 182, 242);
+  text-decoration: underline;
+  cursor: pointer;
 }
+/* Every Page */
 /* Title */
 .company-title {
-  margin: 20px;
+  margin: auto;
+  padding: 10px;
 }
 /* Header */
 .header {
   display: flex;
   flex-direction: row;
+  height: 120px;
 }
 .title-cont {
+  display: flex;
   width: 30%;
-  background-color: rgb(108, 182, 242);
+  justify-content: center;
 }
 .nav-cont {
+  display: flex;
   width: 70%;
+  justify-content: left;
+}
+/* Home Page */
+.home-top {
+  display: flex;
+  width: 100%;
+  background-color: rgb(45, 153, 241);
+}
+.home-top img {
+  width: 100%;
+  border-radius: 15px;
+}
+.top-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+.top-info p {
+  color: white;
+}
+.top-info p2 { 
+  color: white;
+  margin: auto;
+}
+.top-info span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+.top-info span:hover {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.top-info a {
+  text-decoration: none;
+  color: white;
+  margin: 5px auto 5px auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+.top-info a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.top-img {
+  display: flex;
+  width: 50%;
+  justify-content: right;
+  padding: 30px 50px 30px 30px;
+}
+.home-mid {
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+.mid-info1 {
+  display: flex;
+  width: 50%;
+  padding: 30px 50px 30px 30px;
+}
+.mid-info2 {
+  display: flex;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+.home-bot {
+  display: flex;
+  width: 100%;
+  background-color: rgb(236, 236, 249);
+}
+.bot-info1 {
+  display: flex;
+  width: 50%;
+  padding: 30px 50px 30px 30px;
+}
+.bot-info2 {
+  display: flex;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+
+
+@media(max-width: 768px){
+
+}
+@media(min-width: 1200px){
+  body{
+    width: 1200px;
+    margin: auto;
+  }
 }
