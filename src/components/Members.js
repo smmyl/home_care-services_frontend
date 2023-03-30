@@ -1,5 +1,4 @@
-import axios from 'axios'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import EditMember from './members/Edit'
 
 const Members = (props) => {
@@ -9,36 +8,34 @@ const Members = (props) => {
         setEdit(!edit)
     }
 
-    //==Delete Function for Data
-    const handleDeleteMember = (data) => {
-        axios.delete(`http://localhost:3000/members/${data._id}`).then(() => {
-        axios.get('http://localhost:3000/members').then((response) => {
-            props.setMembers(response.data)
-            })
-        })
-    }
-
     return (
         <>
             <h1>Members</h1>
             {props.members.map((member) => {
                 return(
-                    <>
+                <div>
                     {edit ?
+                        <>
+                        <h2>Edit</h2>
                         <EditMember
-                            handleDeleteMember = {handleDeleteMember}
+                            setMembers = {props.setMembers}
                             getMembers = {props.getMembers}
                             member = {member}
                             toggleEdit = {toggleEdit}
                             setEdit = {setEdit}
                         /> 
+                        </>
                         :
                         <>
-                            <p>Name:{member.name}</p>
+                            <h4>{member.name}</h4>
+                            <p>Age: {member.age}</p>
+                            <p>Family Members: {member.familyMember}</p>
+                            <p>Languages: {member.language}</p>
+                            <p>Address: {member.address}</p>
                             <button onClick = {() => {toggleEdit()}}>Edit</button>
-                        </>
-                    }
-                    </>)
+                        </>}
+                </div>
+                )
             })}
         </>
     )

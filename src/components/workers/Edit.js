@@ -34,7 +34,6 @@ const EditWorker = (props) => {
 
     return (
         <>
-            <h2>Edit Worker</h2>
             <form id = 'editWorkerForm' onSubmit = {handleEdit}>
                 <label htmlFor='name'>Name:</label>
                 <input type='text' name='name' onChange={handleNameUpdate} />
