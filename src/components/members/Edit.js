@@ -7,10 +7,10 @@ const EditMember = (props) => {
     const [newAge, setNewAge] = useState(props.member.age)
     const [newLanguage, setNewLanguage] = useState(props.member.language)
     const [newFamilyMember, setNewFamilyMember] = useState(props.member.familyMember)
+    const [newAddress, setNewAddress] = useState(props.member.address)
     const [newClean, setNewClean] = useState(props.member.clean)
     const [newFood, setNewFood] = useState(props.member.food)
     const [newWatch, setNewWatch] = useState(props.member.watch)
-    const [newAddress, setNewAddress] = useState(props.member.address)
 
     const handleNameUpdate = (event) => {
         setNewName(event.target.value)
@@ -24,17 +24,17 @@ const EditMember = (props) => {
     const handleFamilyMemberUpdate = (event) => {
         setNewFamilyMember(event.target.value)
     }
-    const handleCleanUpdate = (event) => {
-        setNewClean(event.target.value)
-    }
-    const handleFoodUpdate = (event) => {
-        setNewFood(event.target.value)
-    }
-    const handleWatchUpdate = (event) => {
-        setNewWatch(event.target.value)
-    }
     const handleAddressUpdate = (event) => {
         setNewAddress(event.target.value)
+    }
+    const handleCleanUpdate = (event) => {
+        setNewClean(!newClean)
+    }
+    const handleFoodUpdate = (event) => {
+        setNewFood(!newFood)
+    }
+    const handleWatchUpdate = (event) => {
+        setNewWatch(!newWatch)
     }
 
     //==Delete Function for Data
@@ -84,6 +84,46 @@ const EditMember = (props) => {
                 <br/>
                 <label htmlFor='address'>Address:</label>
                 <input type='text' name='address' placeholder = {props.member.address} onChange={handleAddressUpdate} />
+                <br/>
+                <br/>
+                <p>Services:</p>
+                {props.member.clean ?
+                <>
+                    <label htmlFor='clean'>Cleaning:</label>
+                    <input type='checkbox' name='clean' onChange={handleCleanUpdate} defaultChecked/>
+                </>
+                :
+                <>
+                    <label htmlFor='clean'>Cleaning:</label>
+                    <input type='checkbox' name='clean' onChange={handleCleanUpdate}/>
+                </>
+                }
+                <br/>
+                <br/>
+                {props.member.food ?
+                <>
+                    <label htmlFor='food'>Food Delivery:</label>
+                    <input type='checkbox' name='food' onChange={handleFoodUpdate} defaultChecked/>
+                </>
+                :
+                <>
+                    <label htmlFor='food'>Food Delivery:</label>
+                    <input type='checkbox' name='food' onChange={handleFoodUpdate}/>
+                </>
+                }
+                <br/>
+                <br/>
+                {props.member.watch ?
+                <>
+                    <label htmlFor='watch'>Monitor:</label>
+                    <input type='checkbox' name='watch' onChange={handleWatchUpdate} defaultChecked/>
+                </>
+                :
+                <>
+                    <label htmlFor='watch'>Monitor:</label>
+                    <input type='checkbox' name='clean' onChange={handleWatchUpdate}/>
+                </>
+                }
                 <br/>
                 <br/>
             </form>

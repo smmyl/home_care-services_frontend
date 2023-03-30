@@ -6,10 +6,10 @@ const AddMember = (props) => {
     const [age, setAge] = useState()
     const [language, setLanguage] = useState()
     const [familyMember, setFamilyMember] = useState()
-    const [clean, setClean] = useState()
-    const [food, setFood] = useState()
-    const [watch, setWatch] = useState()
     const [address, setAddress] = useState()
+    const [clean, setClean] = useState(false)
+    const [food, setFood] = useState(false)
+    const [watch, setWatch] = useState(false)
 
     const handleName = (event) => {
         setName(event.target.value)
@@ -44,11 +44,9 @@ const AddMember = (props) => {
             age: age,
             language: language,
             familyMember: familyMember,
-            services: {
                 clean: clean,
                 food: food,
-                watch: watch
-            },
+                watch: watch,
             address: address
         }).then(() => {
             props.setAdd(false)
@@ -68,7 +66,7 @@ const AddMember = (props) => {
                 <input type='number' name='age' onChange={handleAge} />
                 <br/>
                 <br/>
-                <label htmlFor='familyMember'>Family Member:</label>
+                <label htmlFor='familyMember'>Main Contact:</label>
                 <input type='text' name='familyMember' onChange={handleFamilyMember} />
                 <br/>
                 <br/>
@@ -78,6 +76,18 @@ const AddMember = (props) => {
                 <br/>
                 <label htmlFor='address'>Address:</label>
                 <input type='text' name='address' onChange={handleAddress} />
+                <br/>
+                <p>Services:</p>
+                <label htmlFor='clean'>Cleaning:</label>
+                <input type='checkbox' name='clean' value = 'true' onChange={handleClean}/>
+                <br/>
+                <br/>
+                <label htmlFor='clean'>Food Delivery:</label>
+                <input type='checkbox' name='clean' value = 'true' onChange={handleFood}/>
+                <br/>
+                <br/>
+                <label htmlFor='watch'>Monitor:</label>
+                <input type='checkbox' name='watch' value = 'true' onChange={handleWatch}/>
                 <br/>
                 <br/>
                 <input type="submit" value="Sign Up"/>

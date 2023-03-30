@@ -32,6 +32,31 @@ const Members = (props) => {
                             <p>Family Members: {member.familyMember}</p>
                             <p>Languages: {member.language}</p>
                             <p>Address: {member.address}</p>
+                            <p>Services Needed:</p>
+                            {member.clean ?
+                                <>
+                                    <p>Cleaning</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
+                            {member.food ?
+                                <>
+                                    <p>Food Delivery</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
+                            {member.watch ?
+                                <>
+                                    <p>Monitor</p>
+                                </>
+                                :
+                                <>
+                                </>
+                            }
                             <button onClick = {() => {toggleEdit()}}>Edit</button>
                         </>}
                 </div>
