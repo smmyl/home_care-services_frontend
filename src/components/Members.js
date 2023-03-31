@@ -65,6 +65,7 @@ const Members = (props) => {
                                 <button onClick = {() => {toggleEdit()}}>Edit</button>
                                 </div>
                                 <div class='workerinfoimage'>
+                                    <img src={member.image}></img>
                                 </div>
                             </div>}
                     </div>

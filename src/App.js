@@ -115,7 +115,7 @@ const App = () => {
           </li>
           <li>
             <a href="#" onClick={showLogin}>
-              Sign Up
+              SignUp
             </a>
           </li>
           <li>
