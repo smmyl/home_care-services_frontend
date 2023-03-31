@@ -14,6 +14,7 @@ const Login = (props) => {
 
     return (
         <div class='page'>
+
             <div class='login'>
                 <div class='logintop'>
                     <div class='logintop-img'>
@@ -43,6 +44,7 @@ const Login = (props) => {
                 </div>
                 }
             </div>
+
         </div>
     )
 }

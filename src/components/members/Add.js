@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
+import Members from '../Members'
 
 const AddMember = (props) => {
     const [name, setName] = useState()
@@ -10,6 +11,7 @@ const AddMember = (props) => {
     const [clean, setClean] = useState(false)
     const [food, setFood] = useState(false)
     const [watch, setWatch] = useState(false)
+    const [clickMembers, setClickMembers] = useState(false)
 
     const handleName = (event) => {
         setName(event.target.value)
@@ -34,6 +36,9 @@ const AddMember = (props) => {
     }
     const handleAddress = (event) => {
         setAddress(event.target.value)
+    }
+    const showMembers = () => {
+        setClickMembers(true)
     }
 
     //==Send data to MONGO
@@ -97,7 +102,7 @@ const AddMember = (props) => {
                 </div>
                 <br/>
                 <br/>
-                <input type="submit" value="Sign Up"/>
+                <input type="submit" value="Sign Up" onClick={showMembers}/>
             </form>
         </div>
     )
