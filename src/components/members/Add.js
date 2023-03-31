@@ -55,44 +55,51 @@ const AddMember = (props) => {
     }
 
     return (
-        <>
-            <h3>Add Member</h3>
+        <div class='add'>
+            <h2>Member Sign Up Page</h2>
             <form onSubmit = {handleAddMember}>
-                <label htmlFor='name'>Name:</label>
-                <input type='text' name='name' onChange = {handleName} />
-                <br/>
-                <br/>
-                <label htmlFor='age'>Age:</label>
-                <input type='number' name='age' onChange={handleAge} />
-                <br/>
-                <br/>
-                <label htmlFor='familyMember'>Main Contact:</label>
-                <input type='text' name='familyMember' onChange={handleFamilyMember} />
-                <br/>
-                <br/>
-                <label htmlFor='language'>Language:</label>
-                <input type='text' name='language' onChange={handleLanguage} />
-                <br/>
-                <br/>
-                <label htmlFor='address'>Address:</label>
-                <input type='text' name='address' onChange={handleAddress} />
-                <br/>
-                <p>Services:</p>
-                <label htmlFor='clean'>Cleaning:</label>
-                <input type='checkbox' name='clean' value = 'true' onChange={handleClean}/>
-                <br/>
-                <br/>
-                <label htmlFor='clean'>Food Delivery:</label>
-                <input type='checkbox' name='clean' value = 'true' onChange={handleFood}/>
-                <br/>
-                <br/>
-                <label htmlFor='watch'>Monitor:</label>
-                <input type='checkbox' name='watch' value = 'true' onChange={handleWatch}/>
+                <div class='addinputs'>
+                <div class='addinput'>
+                    <label htmlFor='name'> Name: </label>
+                    <input type='text' name='name' onChange = {handleName} />
+                </div>
+                <div class='addinput' id='addage'>
+                    <label htmlFor='age'> Age: </label>
+                    <input type='number' name='age' onChange={handleAge} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='familyMember'> Main Contact: </label>
+                    <input type='text' name='familyMember' onChange={handleFamilyMember} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='language'> Language: </label>
+                    <input type='text' name='language' onChange={handleLanguage} />
+                </div>
+                <div class='addinput' id='addaddress'>
+                    <label htmlFor='address'> Address: </label>
+                    <input type='text' name='address' onChange={handleAddress} />
+                </div>
+                </div>
+                <div class='addservices'>
+                    <p>Services:</p>
+                    <div class='addservicesinput'>
+                        <label htmlFor='clean'> Cleaning: </label>
+                        <input type='checkbox' name='clean' value = 'true' onChange={handleClean}/>
+                    </div>
+                    <div class='addservicesinput'>
+                        <label htmlFor='clean'> Food Delivery: </label>
+                        <input type='checkbox' name='clean' value = 'true' onChange={handleFood}/>
+                    </div>
+                    <div class='addservicesinput'>
+                        <label htmlFor='watch'> Monitor: </label>
+                        <input type='checkbox' name='watch' value = 'true' onChange={handleWatch}/>
+                    </div>
+                </div>
                 <br/>
                 <br/>
                 <input type="submit" value="Sign Up"/>
             </form>
-        </>
+        </div>
     )
 }
 

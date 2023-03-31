@@ -56,7 +56,7 @@ body {
 }
 .navbar ul li {
   font-size: 1rem; 
-  font-weight: bold; 
+  font-weight: bold;
 }
 .navbar ul li a {
   text-decoration: none;
@@ -72,27 +72,38 @@ body {
 /* Title */
 .company-title {
   margin: auto;
-  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+}
+.company-title:hover {
+  cursor: pointer;
 }
 /* Header */
 .header {
   display: flex;
   flex-direction: row;
-  height: 120px;
+  width: 100%;
 }
 .title-cont {
   display: flex;
   width: 30%;
   justify-content: center;
+  padding: 10px 0 10px 30px;
 }
 .nav-cont {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 70%;
   justify-content: left;
+  padding: 10px 50px 10px 0;
 }
 /* Home Page */
 .home-top {
   display: flex;
+  flex-direction: row;
   width: 100%;
   background-color: rgb(45, 153, 241);
 }
@@ -100,43 +111,45 @@ body {
   width: 100%;
   border-radius: 15px;
 }
-.top-info {
+.hometop-info {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 30px 30px 30px 50px;
 }
-.top-info p {
+.hometop-info p {
   color: white;
 }
-.top-info p2 { 
+.hometop-info p2 { 
   color: white;
   margin: auto;
+  padding-top: 5px;
 }
-.top-info span {
+.hometop-info span {
   font-weight: bold;
   padding-left: 5px;
 }
-.top-info span:hover {
+.hometop-info span:hover {
   color: black;
   text-decoration: underline;
   cursor: pointer;
 }
-.top-info a {
+.hometop-info a {
   text-decoration: none;
   color: white;
   margin: 5px auto 5px auto;
   font-weight: bold;
   cursor: pointer;
 }
-.top-info a:hover {
+.hometop-info a:hover {
   text-decoration: underline;
   color: black;
 }
-.top-img {
+.hometop-img {
   display: flex;
   width: 50%;
   justify-content: right;
+  margin: auto;
   padding: 30px 50px 30px 30px;
 }
 .home-mid {
@@ -144,12 +157,12 @@ body {
   width: 100%;
   background-color: white;
 }
-.mid-info1 {
+.homemid-info1 {
   display: flex;
   width: 50%;
   padding: 30px 50px 30px 30px;
 }
-.mid-info2 {
+.homemid-info2 {
   display: flex;
   width: 50%;
   padding: 30px 30px 30px 50px;
@@ -159,24 +172,250 @@ body {
   width: 100%;
   background-color: rgb(236, 236, 249);
 }
-.bot-info1 {
+.homebot-info1 {
   display: flex;
   width: 50%;
   padding: 30px 50px 30px 30px;
 }
-.bot-info2 {
+.homebot-info2 {
   display: flex;
   width: 50%;
   padding: 30px 30px 30px 50px;
 }
+/* Sign Up Page */
+.login {
+  display: flex;
+  flex-direction: column;
+}
+.logintop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(45, 153, 241);
+}
+.logintop-img {
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+.logintop-img img{
+  width: 80%;
+  border-radius: 15px;
+  margin: 30px 30px 30px 50px;
+}
+.logintop-info {
+  width: 50%;
+  margin: 30px 50px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.logintop-info p {
+  color: white;
+}
+.logintop-info a {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  font-weight: bold;
+}
+.logintop-info a:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.login-a {
+  display: flex;
+  flex-direction: column;
+}
+.loginbot-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  height: 510px;
+}
+.loginbot-info2 {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.add h2 {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+.addinputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.addinput {
+  padding: 5px 10px 5px 0;
+}
+.addinput label {
+  font-weight: bold;
+}
+.addservices {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+}
+.addservicesinput {
+  padding-left: 50px;
+}
+.addservicesinput label {
+  font-weight: bold;
+}
+#addage input {
+  width: 40px;
+}
+#addaddress input {
+  width: 400px;
+}
+/* Workers Page */
+.workers {
+  display: flex;
+  flex-direction: column;
+}
+.workerstop {
+  display: flex;
+  padding: 30px;
+}
+.workersinfo {
+  display: flex;
+  flex-direction: column;
+}
+.workerinfo {
+  display: flex;
+  flex-direction: column;
+}
+.workerinfo img {
+}
 
 
 @media(max-width: 768px){
-
+  /* Header */
+  .header {
+    flex-direction: column;
+  }
+  .title-cont {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+  .title-cont a {
+    padding-top: 20px;
+  }
+  .nav-cont {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+  /* Home Page */
+  .home-top {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+  }
+  .hometop-info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    background-color: rgb(236, 236, 249);
+  }
+  .hometop-info a {
+    color: black;
+    font-size: 1.5em;
+  }
+  .hometop-info a:hover {
+    color: rgb(108, 213, 108);
+  }
+  .hometop-info p {
+    padding: 30px;
+    color: black;
+  }
+  .hometop-info span:hover {
+    color: rgb(108, 213, 108);
+  }
+  .hometop-info p2 {
+    padding: 30px;
+    color: black;
+  }
+  .hometop-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .hometop-img img {
+    width: 60%;
+    margin: 30px;
+    border: 5px solid black;
+  }
+  /* Login Page */
+  .logintop {
+    flex-direction: column;
+  }
+  .logintop-img {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .logintop-img img {
+    width: 60%;
+    border: 5px solid black;
+  }
+  .logintop-info {
+    width: 100%;
+    margin: 0;
+    background-color: ghostwhite;
+  }
+  .logintop-info p {
+    padding: 30px;
+    color: black;
+  }
+  .logintop-info a {
+    color: black;
+    font-size: 1.5em;
+  }
+  .login-a {
+    margin-bottom: 50px;
+  }
+  .logintop-info a:hover {
+    color: rgb(108, 213, 108);
+  }
+  .addinputs {
+    flex-direction: column;
+  }
 }
+
+
 @media(min-width: 1200px){
   body{
     width: 1200px;
     margin: auto;
+  }
+  /* Home Page */
+  .home-top {
+    border-radius: 15px;
+  }
+  .home-mid {
+    border-radius: 15px;
+  }
+  .home-bot {
+    border-radius: 15px;
+  }
+  /* Login Page */
+  .logintop {
+    border-radius: 15px;
+  }
+  .loginbot-info {
+    border-radius: 15px;
   }
 }

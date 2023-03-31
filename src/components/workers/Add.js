@@ -33,28 +33,32 @@ const AddWorker = (props) => {
     }
 
     return (
-        <>
-            <h3>Add Worker</h3>
+        <div class = 'add'>
+            <h2>Worker Sign Up Page</h2>
             <form onSubmit = {handleAddWorker}>
-                <label htmlFor='name'>Name:</label>
-                <input type='text' name='name' onChange = {handleName} />
-                <br/>
-                <br/>
-                <label htmlFor='age'>Age:</label>
-                <input type='number' name='age' onChange={handleAge} />
-                <br/>
-                <br/>
-                <label htmlFor='language'>Language:</label>
-                <input type='text' name='language' onChange={handleLanguage} />
-                <br/>
-                <br/>
-                <label htmlFor='image'>Image Url:</label>
-                <input type='text' name='image' onChange={handleImage} />
+            <div class='addinputs'>
+                <div class='addinput'>
+                    <label htmlFor='name'> Name: </label>
+                    <input type='text' name='name' onChange = {handleName} />
+                </div>
+                <div class='addinput' id='addage'>
+                    <label htmlFor='age'> Age: </label>
+                    <input type='number' name='age' onChange={handleAge} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='language'> Language: </label>
+                    <input type='text' name='language' onChange={handleLanguage} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='image'> Image Url: </label>
+                    <input type='text' name='image' onChange={handleImage} />
+                </div>
+            </div>
                 <br/>
                 <br/>
                 <input type="submit" value="Sign Up"/>
             </form>
-        </>
+        </div>
     )
 }
 

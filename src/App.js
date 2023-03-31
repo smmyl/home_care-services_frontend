@@ -103,7 +103,7 @@ const App = () => {
     <>
       <div class='header'>
       <div class='title-cont'>
-      <h1 class='company-title'>HomeCare Services</h1>
+      <a href = '#' class='company-title'>HomeCare Services</a>
       </div>
       <div class='nav-cont'>
       <nav className="navbar">
@@ -120,7 +120,7 @@ const App = () => {
           </li>
           <li>
             <a href="#" onClick={showWorkers}>
-              Workers
+              Caretakers
             </a>
           </li>
           <li>
@@ -137,7 +137,13 @@ const App = () => {
       </nav>
       </div>
       </div>
-      {clickHome ? <Home /> : null}
+      {clickHome ? (
+        <Home 
+          showHome={showHome}
+          showContact={showContact}
+          showLogin={showLogin}
+        /> 
+      ): null}
 
       {clickMembers ? (
         <Members
@@ -155,7 +161,12 @@ const App = () => {
         />
       ) : null}
       {clickContact ? <Contact /> : null}
-      {clickLogin ? <Login getMembers={getMembers} /> : null}
+      {clickLogin ? 
+      <Login 
+        getMembers={getMembers} 
+        getWorkers={getWorkers}
+        setWorkers={setWorkers}
+      /> : null}
     </>
   );
 };
