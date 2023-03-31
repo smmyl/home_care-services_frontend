@@ -22,21 +22,11 @@ const App = () => {
   const getMembers = () => {
     axios.get("http://localhost:3000/members").then((response) => {
       setMembers(response.data);
-      setClickMembers(false);
-      setClickWorkers(false);
-      setClickProfile(false);
-      setClickContact(false);
-      setClickLogin(false);
     });
   };
   const getWorkers = () => {
     axios.get("http://localhost:3000/workers").then((response) => {
       setWorkers(response.data);
-      setClickMembers(false);
-      setClickWorkers(false);
-      setClickProfile(false);
-      setClickContact(false);
-      setClickLogin(false);
     });
   };
 

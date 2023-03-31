@@ -11,7 +11,6 @@ const EditMember = (props) => {
     const [newClean, setNewClean] = useState(props.member.clean)
     const [newFood, setNewFood] = useState(props.member.food)
     const [newWatch, setNewWatch] = useState(props.member.watch)
-
     const handleNameUpdate = (event) => {
         setNewName(event.target.value)
     }
@@ -37,14 +36,6 @@ const EditMember = (props) => {
         setNewWatch(!newWatch)
     }
 
-    //==Delete Function for Data
-    const handleDeleteMember = (data) => {
-        axios.delete(`http://localhost:3000/members/${data._id}`).then(() => {
-        axios.get('http://localhost:3000/members').then((response) => {
-            props.setMembers(response.data)
-            })
-        })
-    }
     //==Edit Function
     const handleEdit = (event) => {
         event.preventDefault()
@@ -63,74 +54,80 @@ const EditMember = (props) => {
         })
     }
 
+    //==Delete Function for Data
+    const handleDeleteMember = (data) => {
+        axios.delete(`http://localhost:3000/members/${data._id}`).then(() => {
+        axios.get('http://localhost:3000/members').then((response) => {
+            props.setMembers(response.data)
+            })
+        })
+    }
+
     return (
-        <>
+        <div class='membersinfo'>
             <form id = 'editMemberForm' onSubmit = {handleEdit}>
-                <label htmlFor='name'>Name:</label>
-                <input type='text' name='name' placeholder = {props.member.name} onChange={handleNameUpdate} />
-                <br/>
-                <br/>
-                <label htmlFor='age'>Age:</label>
-                <input type='number' name='age' placeholder = {props.member.age} onChange={handleAgeUpdate} />
-                <br/>
-                <br/>
-                <label htmlFor='familyMember'>Family Member:</label>
-                <input type='text' name='familyMember' placeholder = {props.member.familyMember} onChange={handleFamilyMemberUpdate} />
-                <br/>
-                <br/>
-                <label htmlFor='language'>Language:</label>
-                <input type='text' name='language' placeholder = {props.member.language} onChange={handleLanguageUpdate} />
-                <br/>
-                <br/>
-                <label htmlFor='address'>Address:</label>
-                <input type='text' name='address' placeholder = {props.member.address} onChange={handleAddressUpdate} />
-                <br/>
-                <br/>
-                <p>Services:</p>
-                {props.member.clean ?
-                <>
-                    <label htmlFor='clean'>Cleaning:</label>
-                    <input type='checkbox' name='clean' onChange={handleCleanUpdate} defaultChecked/>
-                </>
-                :
-                <>
-                    <label htmlFor='clean'>Cleaning:</label>
-                    <input type='checkbox' name='clean' onChange={handleCleanUpdate}/>
-                </>
-                }
-                <br/>
-                <br/>
-                {props.member.food ?
-                <>
-                    <label htmlFor='food'>Food Delivery:</label>
-                    <input type='checkbox' name='food' onChange={handleFoodUpdate} defaultChecked/>
-                </>
-                :
-                <>
-                    <label htmlFor='food'>Food Delivery:</label>
-                    <input type='checkbox' name='food' onChange={handleFoodUpdate}/>
-                </>
-                }
-                <br/>
-                <br/>
-                {props.member.watch ?
-                <>
-                    <label htmlFor='watch'>Monitor:</label>
-                    <input type='checkbox' name='watch' onChange={handleWatchUpdate} defaultChecked/>
-                </>
-                :
-                <>
-                    <label htmlFor='watch'>Monitor:</label>
-                    <input type='checkbox' name='clean' onChange={handleWatchUpdate}/>
-                </>
-                }
-                <br/>
-                <br/>
+            <div class='editmembersform'>
+                <div class='memberseditinfo'>
+                    <h3>Edit</h3>
+                    <label htmlFor='name'> Name: </label>
+                    <input type='text' name='name' placeholder={props.member.name} onChange={handleNameUpdate} />
+                    <label htmlFor='age'> Age: </label>
+                    <input type='number' name='age' placeholder = {props.member.age} onChange={handleAgeUpdate} />
+                    <label htmlFor='familyMember'> Family Member: </label>
+                    <input type='text' name='familyMember' placeholder = {props.member.familyMember} onChange={handleFamilyMemberUpdate} />
+                    <label htmlFor='language'> Language: </label>
+                    <input type='text' name='language' placeholder = {props.member.language} onChange={handleLanguageUpdate} />
+                    <label htmlFor='address'> Address: </label>
+                    <input type='text' name='address' placeholder = {props.member.address} onChange={handleAddressUpdate} />
+                </div>
+                <div class='servicesinfo'>
+                    <p> Services: </p>
+                    <div class='checkbox'>
+                    {props.member.clean ?
+                    <>
+                        <label htmlFor='clean'> Cleaning: </label>
+                        <input type='checkbox' name='clean' onChange={handleCleanUpdate} defaultChecked/>
+                    </>
+                    :
+                    <>
+                        <label htmlFor='clean'> Cleaning: </label>
+                        <input type='checkbox' name='clean' onChange={handleCleanUpdate}/>
+                    </>
+                    }
+                    <br/>
+                    {props.member.food ?
+                    <>
+                        <label htmlFor='food'> Food Delivery: </label>
+                        <input type='checkbox' name='food' onChange={handleFoodUpdate} defaultChecked/>
+                    </>
+                    :
+                    <>
+                        <label htmlFor='food'> Food Delivery: </label>
+                        <input type='checkbox' name='food' onChange={handleFoodUpdate}/>
+                    </>
+                    }
+                    <br/>
+                    {props.member.watch ?
+                    <>
+                        <label htmlFor='watch'> Monitor: </label>
+                        <input type='checkbox' name='watch' onChange={handleWatchUpdate} defaultChecked/>
+                    </>
+                    :
+                    <>
+                        <label htmlFor='watch'> Monitor: </label>
+                        <input type='checkbox' name='clean' onChange={handleWatchUpdate}/>
+                    </>
+                    }
+                    </div>
+                </div>
+            </div>
             </form>
-            <button type = 'submit' form = 'editMemberForm'>Update</button>
-            <button onClick = {() => {handleDeleteMember(props.member)}}>Delete</button>
-            <button onClick = {() => {props.toggleEdit()}}>Cancel</button>
-        </>
+            <div class='memberseditbtn'>
+                <button type = 'submit' form = 'editMemberForm'>Update</button>
+                <button onClick = {() => {handleDeleteMember(props.member)}}>Delete</button>
+                <button onClick = {() => {props.toggleEdit()}}>Cancel</button>
+            </div>
+        </div>
     )
 }
 
