@@ -101,6 +101,11 @@ const App = () => {
 
   return (
     <>
+      <div class='header'>
+      <div class='title-cont'>
+      <h1 class='company-title'>HomeCare Services</h1>
+      </div>
+      <div class='nav-cont'>
       <nav className="navbar">
         <ul>
           <li>
@@ -130,6 +135,8 @@ const App = () => {
           </li>
         </ul>
       </nav>
+      </div>
+      </div>
       {clickHome ? <Home /> : null}
 
       {clickMembers ? (
