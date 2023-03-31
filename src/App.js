@@ -7,6 +7,7 @@ import Profile from "./components/Profile";
 import Workers from "./components/Workers";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
+import Signup from"./components/Signup";
 
 const App = () => {
   const [members, setMembers] = useState([]);
@@ -16,6 +17,7 @@ const App = () => {
   const [clickProfile, setClickProfile] = useState(false);
   const [clickContact, setClickContact] = useState(false);
   const [clickLogin, setClickLogin] = useState(false);
+  const [clickSignup, setClickSignup] = useState(false)
   const [clickHome, setClickHome] = useState(true);
 
   // ==Get Data
@@ -27,6 +29,7 @@ const App = () => {
       setClickProfile(false);
       setClickContact(false);
       setClickLogin(false);
+      setClickSignup(false)
     });
   };
   const getWorkers = () => {
@@ -37,6 +40,7 @@ const App = () => {
       setClickProfile(false);
       setClickContact(false);
       setClickLogin(false);
+      setClickSignup(false)
     });
   };
 
@@ -47,6 +51,7 @@ const App = () => {
     setClickProfile(false);
     setClickContact(false);
     setClickLogin(false);
+    setClickSignup(false)
   };
 
   const showMembers = () => {
@@ -56,6 +61,7 @@ const App = () => {
     setClickContact(false);
     setClickLogin(false);
     setClickHome(false);
+    setClickSignup(false)
   };
 
   const showWorkers = () => {
@@ -65,6 +71,7 @@ const App = () => {
     setClickContact(false);
     setClickLogin(false);
     setClickHome(false);
+    setClickSignup(false)
   };
 
   const showProfile = () => {
@@ -74,6 +81,7 @@ const App = () => {
     setClickContact(false);
     setClickLogin(false);
     setClickHome(false);
+    setClickSignup(false)
   };
 
   const showContact = () => {
@@ -83,6 +91,7 @@ const App = () => {
     setClickContact(true);
     setClickLogin(false);
     setClickHome(false);
+    setClickSignup(false)
   };
 
   const showLogin = () => {
@@ -92,8 +101,18 @@ const App = () => {
     setClickContact(false);
     setClickLogin(true);
     setClickHome(false);
+    setClickSignup(false)
   };
 
+  const showSignup = () => {
+    setClickMembers(false);
+    setClickWorkers(false);
+    setClickProfile(false);
+    setClickContact(false);
+    setClickLogin(false);
+    setClickHome(false);
+    setClickSignup(true)
+  }
   useEffect(() => {
     getMembers();
     getWorkers();
@@ -114,7 +133,7 @@ const App = () => {
             </a>
           </li>
           <li>
-            <a href="#" onClick={showLogin}>
+            <a href="#" onClick={showSignup}>
               Sign Up
             </a>
           </li>
@@ -131,6 +150,11 @@ const App = () => {
           <li>
             <a href="#" onClick={showContact}>
               Contact
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={showLogin}>
+              Login
             </a>
           </li>
         </ul>
@@ -155,8 +179,9 @@ const App = () => {
         />
       ) : null}
       {clickContact ? <Contact /> : null}
-      {clickLogin ? <Login getMembers={getMembers} 
+      {clickSignup ? <Signup getMembers={getMembers} 
       showMembers={showMembers} /> : null}
+      {clickLogin ? <Login /> : null}
     </>
   );
 };

@@ -8,11 +8,6 @@ const Login = (props) => {
     return (
         <div class='page'>
             <h2>Login</h2>
-            <h2>Sign Up</h2>
-            <AddMember
-                getMembers = {props.getMembers}
-            />
-            <AddWorker/>
         </div>
     )
 }
