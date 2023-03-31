@@ -103,7 +103,7 @@ const App = () => {
     <>
       <div class='header'>
       <div class='title-cont'>
-      <h1 class='company-title'>HomeCare Services</h1>
+      <a href = '#' class='company-title'>HomeCare Services</a>
       </div>
       <div class='nav-cont'>
       <nav className="navbar">
