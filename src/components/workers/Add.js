@@ -29,6 +29,7 @@ const AddWorker = (props) => {
             image: image
         }).then(() => {
             props.getWorkers()
+            props.showWorkers()
         })
     }
 

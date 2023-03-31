@@ -41,6 +41,7 @@ const Login = (props) => {
                         <AddWorker
                             getWorkers = {props.getWorkers}
                             setWorkers = {props.setWorkers}
+                            showWorkers = {props.showWorkers}
                         />
                     </div>
                 </div>
