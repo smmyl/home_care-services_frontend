@@ -55,42 +55,42 @@ const AddMember = (props) => {
     }
 
     return (
-        <div class='addmembers'>
+        <div class='add'>
             <h2>Member Sign Up Page</h2>
             <form onSubmit = {handleAddMember}>
-                <div class='addmemberinputs'>
-                <div class='addmemberinput'>
+                <div class='addinputs'>
+                <div class='addinput'>
                     <label htmlFor='name'> Name: </label>
                     <input type='text' name='name' onChange = {handleName} />
                 </div>
-                <div class='addmemberinput' id='addmemberage'>
+                <div class='addinput' id='addage'>
                     <label htmlFor='age'> Age: </label>
                     <input type='number' name='age' onChange={handleAge} />
                 </div>
-                <div class='addmemberinput'>
+                <div class='addinput'>
                     <label htmlFor='familyMember'> Main Contact: </label>
                     <input type='text' name='familyMember' onChange={handleFamilyMember} />
                 </div>
-                <div class='addmemberinput'>
+                <div class='addinput'>
                     <label htmlFor='language'> Language: </label>
                     <input type='text' name='language' onChange={handleLanguage} />
                 </div>
-                <div class='addmemberinput' id='addmemberaddress'>
+                <div class='addinput' id='addaddress'>
                     <label htmlFor='address'> Address: </label>
                     <input type='text' name='address' onChange={handleAddress} />
                 </div>
                 </div>
-                <div class='addmemberservices'>
+                <div class='addservices'>
                     <p>Services:</p>
-                    <div class='addmemberservicesinput'>
+                    <div class='addservicesinput'>
                         <label htmlFor='clean'> Cleaning: </label>
                         <input type='checkbox' name='clean' value = 'true' onChange={handleClean}/>
                     </div>
-                    <div class='addmemberservicesinput'>
+                    <div class='addservicesinput'>
                         <label htmlFor='clean'> Food Delivery: </label>
                         <input type='checkbox' name='clean' value = 'true' onChange={handleFood}/>
                     </div>
-                    <div class='addmemberservicesinput'>
+                    <div class='addservicesinput'>
                         <label htmlFor='watch'> Monitor: </label>
                         <input type='checkbox' name='watch' value = 'true' onChange={handleWatch}/>
                     </div>

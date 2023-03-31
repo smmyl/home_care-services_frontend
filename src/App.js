@@ -120,7 +120,7 @@ const App = () => {
           </li>
           <li>
             <a href="#" onClick={showWorkers}>
-              Workers
+              Caretakers
             </a>
           </li>
           <li>
@@ -137,7 +137,13 @@ const App = () => {
       </nav>
       </div>
       </div>
-      {clickHome ? <Home /> : null}
+      {clickHome ? (
+        <Home 
+          showHome={showHome}
+          showContact={showContact}
+          showLogin={showLogin}
+        /> 
+      ): null}
 
       {clickMembers ? (
         <Members

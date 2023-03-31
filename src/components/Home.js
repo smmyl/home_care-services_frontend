@@ -1,16 +1,16 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
-const Home = () => {
+const Home = (props) => {
 
     return (
         <div class='page'>
             <div class='home-top'>
                 <div class='hometop-info'>
                     <p>Lorem ipsum dolor sit amet. Qui esse officiis ex earum iste sit aliquid expedita. Et eveniet deserunt non enim quaerat et adipisci sequi eos commodi magni aut voluptatem omnis vel error quos. Est aspernatur rerum eos libero error hic illum repudiandae est atque nisi ut vitae deleniti aut autem odio. Est quidem atque sed dolores esse in odio pariatur ex atque laudantium non quisquam error.</p>
-                    <a href='#'>Sign Up</a>
-                    <a href='#'>Login</a>
-                    <a href='#'>Contact</a>
+                    <a onClick={props.showLogin}>Sign Up</a>
+                    <a onClick={props.showLogin}>Login</a>
+                    <a onClick={props.showContact}>Contact</a>
                     <p2> or call us at <span>888-888-888</span></p2>
                 </div>
                 <div class='hometop-img'>

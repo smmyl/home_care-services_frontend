@@ -3,7 +3,14 @@ import AddMember from './members/Add'
 import AddWorker from './workers/Add'
 
 const Login = (props) => {
+    const[target, setTarget] = useState(true)
 
+    const showMember = () => {
+        setTarget(true)
+    }
+    const showWorker = () => {
+        setTarget(false)
+    }
 
     return (
         <div class='page'>
@@ -14,18 +21,27 @@ const Login = (props) => {
                     </div>
                     <div class='logintop-info'>
                         <p>Qui autem provident aut dicta pariatur aut omnis laudantium et ipsa laborum aut inventore internos. Et numquam reiciendis aut blanditiis nesciunt ut suscipit incidunt in error accusamus ut dolores alias sed explicabo consequatur ut debitis totam. Ut enim reiciendis aut explicabo aliquid sed quaerat nihil et accusamus fuga est velit omnis. Cum dolores aspernatur qui architecto consequuntur 33 perferendis quia ut harum iusto est tempora rerum eum aperiam aliquid.</p>
-                        <a href='#'>Sign Up as a Member</a>
-                        <a href='#'>Sign Up as a Caretaker</a>
+                        <a onClick={showMember}>Sign Up as a Member</a>
+                        <a onClick={showWorker}>Sign Up as a Caretaker</a>
                     </div>
                 </div>
+                {target ?
                 <div class='loginbot-info'>
                     <div class = 'loginbot-info2'>
-                    <AddMember
-                        getMembers = {props.getMembers}
-                    />
-                    {/* <AddWorker/> */}
+                        <AddMember
+                            getMembers = {props.getMembers}
+                        />
                     </div>
                 </div>
+                :
+                <div class='loginbot-info'>
+                    <div class = 'loginbot-info2'>
+                        <AddWorker
+                            getWorkers = {props.getWorkers}
+                        />
+                    </div>
+                </div>
+                }
             </div>
         </div>
     )

@@ -196,6 +196,7 @@ body {
 .logintop-img {
   display: flex;
   width: 50%;
+  margin: auto;
 }
 .logintop-img img{
   width: 80%;
@@ -219,6 +220,7 @@ body {
 .logintop-info a:hover {
   text-decoration: underline;
   color: black;
+  cursor: pointer;
 }
 .loginbot-info {
   display: flex;
@@ -230,42 +232,42 @@ body {
   flex-direction: column;
   margin: 30px;
 }
-.addmembers {
+.add {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.addmembers h2 {
+.add h2 {
   text-align: center;
   margin: 20px 0 40px 0;
 }
-.addmemberinputs {
+.addinputs {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-.addmemberinput {
+.addinput {
   padding: 5px 10px 5px 0;
 }
-.addmemberinput label {
+.addinput label {
   font-weight: bold;
 }
-.addmemberservices {
+.addservices {
   display: flex;
   flex-direction: column;
   width: 100%;
   font-weight: bold;
 }
-.addmemberservicesinput {
+.addservicesinput {
   padding-left: 50px;
 }
-.addmemberservicesinput label {
+.addservicesinput label {
   font-weight: bold;
 }
-#addmemberage input{
+#addage input{
   width: 40px;
 }
-#addmemberaddress input {
+#addaddress input {
   width: 400px;
 }
 @media(max-width: 768px){
@@ -301,6 +303,7 @@ body {
   }
   .hometop-info a {
     color: black;
+    font-size: 1.5em;
   }
   .hometop-info a:hover {
     color: rgb(108, 213, 108);
