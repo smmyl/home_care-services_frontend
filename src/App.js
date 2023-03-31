@@ -166,6 +166,8 @@ const App = () => {
         getMembers={getMembers} 
         getWorkers={getWorkers}
         setWorkers={setWorkers}
+        showMembers={showMembers}
+        showWorkers={showWorkers}
       /> : null}
     </>
   );
