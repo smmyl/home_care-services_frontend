@@ -21,8 +21,10 @@ const Login = (props) => {
                     </div>
                     <div class='logintop-info'>
                         <p>Qui autem provident aut dicta pariatur aut omnis laudantium et ipsa laborum aut inventore internos. Et numquam reiciendis aut blanditiis nesciunt ut suscipit incidunt in error accusamus ut dolores alias sed explicabo consequatur ut debitis totam. Ut enim reiciendis aut explicabo aliquid sed quaerat nihil et accusamus fuga est velit omnis. Cum dolores aspernatur qui architecto consequuntur 33 perferendis quia ut harum iusto est tempora rerum eum aperiam aliquid.</p>
-                        <a onClick={showMember}>Sign Up as a Member</a>
-                        <a onClick={showWorker}>Sign Up as a Caretaker</a>
+                        <div class = 'login-a'>
+                            <a onClick={showMember}>Sign Up as a Member</a>
+                            <a onClick={showWorker}>Sign Up as a Caretaker</a>
+                        </div>
                     </div>
                 </div>
                 {target ?
@@ -38,6 +40,7 @@ const Login = (props) => {
                     <div class = 'loginbot-info2'>
                         <AddWorker
                             getWorkers = {props.getWorkers}
+                            setWorkers = {props.setWorkers}
                         />
                     </div>
                 </div>

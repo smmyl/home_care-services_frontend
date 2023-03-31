@@ -161,7 +161,12 @@ const App = () => {
         />
       ) : null}
       {clickContact ? <Contact /> : null}
-      {clickLogin ? <Login getMembers={getMembers} /> : null}
+      {clickLogin ? 
+      <Login 
+        getMembers={getMembers} 
+        getWorkers={getWorkers}
+        setWorkers={setWorkers}
+      /> : null}
     </>
   );
 };
