@@ -11,6 +11,7 @@ const EditMember = (props) => {
     const [newClean, setNewClean] = useState(props.member.clean)
     const [newFood, setNewFood] = useState(props.member.food)
     const [newWatch, setNewWatch] = useState(props.member.watch)
+    const [newImage, setNewImage] = useState(props.member.image)
     const handleNameUpdate = (event) => {
         setNewName(event.target.value)
     }
@@ -35,6 +36,9 @@ const EditMember = (props) => {
     const handleWatchUpdate = (event) => {
         setNewWatch(!newWatch)
     }
+    const handleImageUpdate = (event) => {
+        setNewImage(event.target.value)
+    }
 
     //==Edit Function
     const handleEdit = (event) => {
@@ -47,7 +51,8 @@ const EditMember = (props) => {
             clean: newClean,
             food: newFood,
             watch: newWatch,
-            address: newAddress
+            address: newAddress,
+            image: newImage
         }).then (() => {
             props.getMembers()
             props.setEdit(false)
@@ -79,6 +84,8 @@ const EditMember = (props) => {
                     <input type='text' name='language' placeholder = {props.member.language} onChange={handleLanguageUpdate} />
                     <label htmlFor='address'> Address: </label>
                     <input type='text' name='address' placeholder = {props.member.address} onChange={handleAddressUpdate} />
+                    <label htmlFor='image'> Image URL: </label>
+                    <input type='text' name='image' placeholder = {props.member.image} onChange={handleImageUpdate} />
                 </div>
                 <div class='servicesinfo'>
                     <p> Services: </p>

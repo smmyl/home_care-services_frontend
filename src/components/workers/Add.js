@@ -6,6 +6,8 @@ const AddWorker = (props) => {
     const [age, setAge] = useState()
     const [language, setLanguage] = useState()
     const [image, setImage] = useState()
+    const [username, setUsername] = useState()
+    const [password, setPassword] = useState()
 
     const handleName = (event) => {
         setName(event.target.value)
@@ -19,6 +21,12 @@ const AddWorker = (props) => {
     const handleImage = (event) => {
         setImage(event.target.value)
     }
+    const handleUsername = (event) => {
+        setUsername(event.target.value)
+    }
+    const handlePassword = (event) => {
+        setPassword(event.target.value)
+    }
     //==Send data to MONGO
     const handleAddWorker = (event) => {
         event.preventDefault()
@@ -26,7 +34,9 @@ const AddWorker = (props) => {
             name: name,
             age: age,
             language: language,
-            image: image
+            image: image,
+            username: username,
+            password: password
         }).then(() => {
             props.getWorkers()
             props.showWorkers()
@@ -53,6 +63,14 @@ const AddWorker = (props) => {
                 <div class='addinput'>
                     <label htmlFor='image'> Image Url: </label>
                     <input type='text' name='image' onChange={handleImage} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='username'> Username: </label>
+                    <input type='text' name='username' onChange={handleUsername} />
+                </div>
+                <div class='addinput'>
+                    <label htmlFor='password'> Password: </label>
+                    <input type='text' name='password' onChange={handlePassword} />
                 </div>
             </div>
                 <br/>
