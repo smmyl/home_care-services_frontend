@@ -7,13 +7,13 @@ const Contact = (props) => {
     <div class="page">
       <div class="home-top">
         <div class="hometop-info">
-          <p>
+          <h4 className="bluetop">
             HomeCare Services is a personal home response company that aids the
             elderly through personal care. The company's service solves an
             elderly home security issue by giving elderly a hand to avoid
             unforseen circumstances. Weather it be help with cleaning, food
             delivery or monitoring, HomeCare Services does it all.
-          </p>
+          </h4>
           <p2>
             
             Email us at<span>HomeCareServices@gmail.com</span>
