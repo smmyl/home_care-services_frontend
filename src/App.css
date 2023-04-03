@@ -1,3 +1,6 @@
+body {
+  background-color: #F5f5f2;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,584 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+/* Everything */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+/* NavBar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 40px 0px;
+}
+.navbar ul li {
+  font-size: 1rem; 
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  justify-content: center; 
+  list-style: none;
+}
+
+.links img {
+  height: 45px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 25px;
+}
+.navbar ul li a:hover {
+  color: rgb(108, 182, 242);
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* Every Page */
+/* Title */
+.company-title {
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+}
+.company-title:hover {
+  cursor: pointer;
+}
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.title-cont {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  padding: 10px 0 10px 30px;
+}
+.nav-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: left;
+  padding: 10px 50px 10px 0;
+}
+/* Home Page */
+.home-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #82b087;
+}
+.home-top img {
+  width: 100%;
+  border-radius: 15px;
+}
+.hometop-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+.hometop-info p {
+  color: white;
+}
+.hometop-info p2 { 
+  color: white;
+  margin: auto;
+  padding-top: 5px;
+}
+.hometop-info span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+.hometop-info span:hover {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hometop-info a {
+  text-decoration: none;
+  color: white;
+  margin: 5px auto 5px auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hometop-info a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.hometop-img {
+  display: flex;
+  width: 50%;
+  justify-content: right;
+  margin: auto;
+  padding: 30px 50px 30px 30px;
+}
+.home-mid {
+  display: flex;
+  width: 100%;
+}
+.homemid-info1 {
+  display: flex;
+  width: 50%;
+  padding: 30px 50px 30px 30px;
+}
+.homemid-info2 {
+  display: flex;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+.home-bot {
+  display: flex;
+  width: 100%;
+}
+.homebot-info1 {
+  display: flex;
+  width: 50%;
+  padding: 30px 50px 30px 30px;
+}
+.homebot-info2 {
+  display: flex;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+}
+/* Sign Up Page */
+.reg {
+  display: flex;
+  flex-direction: column;
+}
+.regtop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #82b087;
+}
+.regtop-img {
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+.regtop-img img{
+  width: 80%;
+  border-radius: 15px;
+  margin: 30px 30px 30px 50px;
+}
+.regtop-info {
+  width: 50%;
+  margin: 30px 50px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.regtop-info p {
+  color: white;
+}
+.regtop-info a {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  font-weight: bold;
+}
+.regtop-info a:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.reg-a {
+  display: flex;
+  flex-direction: column;
+}
+.regbot-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 510px;
+}
+.regbot-info2 {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.add h2 {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+.addinputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.addinput {
+  padding: 5px 10px 5px 0;
+}
+.addinput label {
+  font-weight: bold;
+}
+.addservices {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+}
+.addservicesinput {
+  padding-left: 50px;
+}
+.addservicesinput label {
+  font-weight: bold;
+}
+#addage input {
+  width: 40px;
+}
+#addaddress input {
+  width: 400px;
+}
+/* Workers Page */
+.workers {
+  display: flex;
+  flex-direction: column;
+}
+.workerstop {
+  display: flex;
+  padding: 30px;
+  background-color: #82b087;
+}
+.workerstop p {
+  color: white;
+}
+.workersinfo {
+  display: flex;
+  flex-direction: column;
+}
+.workerinfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #9cc0e1;
+  margin: 10px 0 10px 0;
+}
+.workerinfoinfo {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin: 30px 30px 30px 50px;
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(239, 248, 239);
+  border-radius: 15px;
+  flex-wrap: wrap;
+  line-height: 1px;
+}
+.workerinfoinfo button {
+  width: 50px;
+}
+.workerinfoimage {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.workerinfoimage img {
+  max-width: 80%;
+  margin: auto;
+  margin: 30px 50px 30px 30px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+.workereditinfo {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px 30px 30px 50px;
+  flex-wrap: wrap;
+}
+.workereditbtn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.workereditbtn button {
+  width: 60px;
+  margin: 5px;
+}
+/* Members Page */
+.members {
+  display: flex;
+  flex-direction: column;
+}
+.memberstop {
+  display: flex;
+  padding: 30px;
+  background-color: #6e8d71;
+}
+.memberstop p {
+  color: white;
+}
+.membersinfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #9cc0e1;
+  margin: 10px 0 10px 0;
+}
+.membersinfoinfo {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin: 30px 30px 30px 50px;
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(239, 248, 239);
+  border-radius: 15px;
+  flex-wrap: wrap;
+  line-height: 1px;
+}
+.membersinfoinfo button {
+  width: 50px;
+}
+.membersinfoimage {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.membersinfoimage img {
+  max-width: 80%;
+  margin: auto;
+  margin: 30px 50px 30px 30px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+.memberseditinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+  flex-wrap: wrap;
+}
+.memberseditbtn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.memberseditbtn button {
+  width: 60px;
+  margin: 5px;
+}
+.servicesinfo p {
+  font-weight: bold;
+}
+.servicesinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 0;
+}
+.editmembersform {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.membersinfo form {
+  width: 100%;
+}
+.checkbox {
+  padding-left: 20px;
+}
+
+
+@media(max-width: 768px){
+  /* Header */
+  .header {
+    flex-direction: column;
+  }
+  .title-cont {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+  .title-cont a {
+    padding-top: 20px;
+  }
+  .nav-cont {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+  /* Home Page */
+  .home-top {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+  }
+  .hometop-info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    background-color: rgb(236, 236, 249);
+  }
+  .hometop-info a {
+    color: black;
+    font-size: 1.5em;
+  }
+  .hometop-info a:hover {
+    color: rgb(108, 213, 108);
+  }
+  .hometop-info p {
+    padding: 30px;
+    color: black;
+  }
+  .hometop-info span:hover {
+    color: rgb(108, 213, 108);
+  }
+  .hometop-info p2 {
+    padding: 30px;
+    color: black;
+    
+  }
+  .hometop-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .hometop-img img {
+    width: 60%;
+    margin: 30px;
+    border: 5px solid black;
+  }
+  /* reg Page */
+  .regtop {
+    flex-direction: column;
+  }
+  .regtop-img {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .regtop-img img {
+    width: 60%;
+    border: 5px solid black;
+  }
+  .regtop-info {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+  }
+  .regtop-info p {
+    padding: 30px;
+    color: rgb(255, 255, 255);
+  }
+  .regtop-info a {
+    color: black;
+    font-size: 1.5em;
+  }
+  .reg-a {
+    margin-bottom: 50px;
+  }
+  .regtop-info a:hover {
+    color: rgb(108, 213, 108);
+  }
+  .addinputs {
+    flex-direction: column;
+  }
+}
+
+#map {
+  height: 100%;
+}
+
+@media(min-width: 1200px){
+  body{
+    width: 1200px;
+    margin: auto;
+  }
+  /* Home Page */
+  .home-top {
+    border-radius: 15px;
+  }
+  .home-mid {
+    border-radius: 15px;
+  }
+  .home-bott {
+    border-radius: 15px;
+  }
+  /* reg Page */
+  .regtop {
+    border-radius: 15px;
+  }
+  .regbot-info {
+    border-radius: 15px;
+  }
+  /* Caretaker Page */
+  .workerstop {
+    border-radius: 15px;
+  }
+  .workerinfo {
+    border-radius: 15px;
+  }
+
+}
+
+h3 {
+  text-align: center;
+}
+
+.hours {
+  list-style: none;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+.home-mid {
+  
+  width: 100%;
+  margin: 0;
+}
+.mid-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 100%;
+}
+.mid-img img {
+  width: 100%;
+  height: 70%;
+  margin: 30px;
+  display: flex;
+}
+
+  /* Members Page */
+  .memberstop {
+    border-radius: 15px;
+  }
+  .membersinfo {
+    border-radius: 15px;
+  }
+
+.bluetop {
+  color: white;
+}
+.homelink {
+  text-align: center;
 }
