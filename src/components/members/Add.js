@@ -54,8 +54,9 @@ const AddMember = (props) => {
             address: address,
             image: image
         }).then(() => {
-            props.setAdd(false)
+            // props.setAdd(false)
             props.getMembers()
+            props.showMembers()
         })
     }
 

@@ -6,7 +6,7 @@ import Members from "./components/Members";
 import Profile from "./components/Profile";
 import Workers from "./components/Workers";
 import Contact from "./components/Contact";
-import Login from "./components/Login";
+import Register from "./components/Register";
 
 const App = () => {
   const [members, setMembers] = useState([]);
@@ -15,7 +15,7 @@ const App = () => {
   const [clickWorkers, setClickWorkers] = useState(false);
   const [clickProfile, setClickProfile] = useState(false);
   const [clickContact, setClickContact] = useState(false);
-  const [clickLogin, setClickLogin] = useState(false);
+  const [clickRegister, setClickRegister] = useState(false);
   const [clickHome, setClickHome] = useState(true);
 
   // ==Get Data
@@ -36,7 +36,7 @@ const App = () => {
     setClickWorkers(false);
     setClickProfile(false);
     setClickContact(false);
-    setClickLogin(false);
+    setClickRegister(false);
   };
 
   const showMembers = () => {
@@ -44,7 +44,7 @@ const App = () => {
     setClickWorkers(false);
     setClickProfile(false);
     setClickContact(false);
-    setClickLogin(false);
+    setClickRegister(false);
     setClickHome(false);
   };
 
@@ -53,7 +53,7 @@ const App = () => {
     setClickWorkers(true);
     setClickProfile(false);
     setClickContact(false);
-    setClickLogin(false);
+    setClickRegister(false);
     setClickHome(false);
   };
 
@@ -62,7 +62,7 @@ const App = () => {
     setClickWorkers(false);
     setClickProfile(true);
     setClickContact(false);
-    setClickLogin(false);
+    setClickRegister(false);
     setClickHome(false);
   };
 
@@ -71,16 +71,16 @@ const App = () => {
     setClickWorkers(false);
     setClickProfile(false);
     setClickContact(true);
-    setClickLogin(false);
+    setClickRegister(false);
     setClickHome(false);
   };
 
-  const showLogin = () => {
+  const showRegister = () => {
     setClickMembers(false);
     setClickWorkers(false);
     setClickProfile(false);
     setClickContact(false);
-    setClickLogin(true);
+    setClickRegister(true);
     setClickHome(false);
   };
 
@@ -107,8 +107,8 @@ const App = () => {
             </a>
           </li>
           <li>
-            <a href="#" onClick={showLogin}>
-              SignUp
+            <a href="#" onClick={showRegister}>
+              Register
             </a>
           </li>
           <li>
@@ -134,7 +134,7 @@ const App = () => {
         <Home 
           showHome={showHome}
           showContact={showContact}
-          showLogin={showLogin}
+          showRegister={showRegister}
         /> 
       ): null}
 
@@ -154,9 +154,10 @@ const App = () => {
         />
       ) : null}
       {clickContact ? <Contact /> : null}
-      {clickLogin ? 
-      <Login 
+      {clickRegister ? 
+      <Register 
         getMembers={getMembers} 
+        setMembers={setMembers}
         getWorkers={getWorkers}
         setWorkers={setWorkers}
         showMembers={showMembers}

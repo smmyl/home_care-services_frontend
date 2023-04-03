@@ -19,8 +19,8 @@ const Home = (props) => {
           for all that they have done and to make a positive impact on their quality of life.
           </h4>
           <p className="homelink">
-          <a onClick={props.showLogin}>Sign Up</a><br/>
-          <a onClick={props.showLogin}>Login</a><br/>
+          <a onClick={props.showRegister}>Sign Up</a><br/>
+          <a onClick=''>Login</a><br/>
           <a onClick={props.showContact}>Contact</a><br/>
           <p2>
             {" "}
