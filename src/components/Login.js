@@ -3,6 +3,9 @@ import { useState } from "react";
 const Login = () => {
   const [login, setLogin] = useState(true);
 
+  const member1 = document.querySelector('member1');
+  const worker1 = document.querySelector('worker1')
+
   const memberLogin = () => {
     setLogin(true);
   };
@@ -12,12 +15,13 @@ const Login = () => {
   };
 
   return (
+    <div className="logbox">
     <div className="loginpage">
       <div className="log">
         <br />
         <h2>Login</h2>
-        <a id="memberclick" onClick={memberLogin}>Member</a>
-        <a id="workerclick" onClick={workerLogin}>Caretaker</a>
+        <a id="member1" onClick={memberLogin}>Member</a>
+        <a id="worker1" onClick={workerLogin}>Caretaker</a>
       </div>
       <br />
       <br />
@@ -43,6 +47,7 @@ const Login = () => {
       <br />
       <br />
       <input class="loginbttn" type="submit" value="Log In" />
+    </div>
     </div>
   );
 };

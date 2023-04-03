@@ -20,7 +20,7 @@ const Home = (props) => {
           </h4>
           <p className="homelink">
           <a onClick={props.showRegister}>Sign Up</a><br/>
-          <a onClick=''>Login</a><br/>
+          <a onClick={props.showLogin}>Login</a><br/>
           <a onClick={props.showContact}>Contact</a><br/>
           <p2>
             {" "}
