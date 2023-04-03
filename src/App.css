@@ -320,6 +320,8 @@ body {
   padding: 10px 10px 10px 10px;
   background-color: rgb(239, 248, 239);
   border-radius: 15px;
+  flex-wrap: wrap;
+  line-height: 1px;
 }
 .workerinfoinfo button {
   width: 50px;
@@ -335,6 +337,106 @@ body {
   margin: 30px 50px 30px 30px;
   border-radius: 15px;
   border: 3px solid black;
+}
+.workereditinfo {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px 30px 30px 50px;
+  flex-wrap: wrap;
+}
+.workereditbtn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.workereditbtn button {
+  width: 60px;
+  margin: 5px;
+}
+/* Members Page */
+.members {
+  display: flex;
+  flex-direction: column;
+}
+.memberstop {
+  display: flex;
+  padding: 30px;
+  background-color: rgb(45, 153, 241);
+}
+.memberstop p {
+  color: white;
+}
+.membersinfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: ghostwhite;
+  margin: 10px 0 10px 0;
+}
+.membersinfoinfo {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin: 30px 30px 30px 50px;
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(239, 248, 239);
+  border-radius: 15px;
+  flex-wrap: wrap;
+  line-height: 1px;
+}
+.membersinfoinfo button {
+  width: 50px;
+}
+.membersinfoimage {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.membersinfoimage img {
+  max-width: 80%;
+  margin: auto;
+  margin: 30px 50px 30px 30px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+.memberseditinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 50px;
+  flex-wrap: wrap;
+}
+.memberseditbtn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.memberseditbtn button {
+  width: 60px;
+  margin: 5px;
+}
+.servicesinfo p {
+  font-weight: bold;
+}
+.servicesinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 30px 30px 0;
+}
+.editmembersform {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.membersinfo form {
+  width: 100%;
+}
+.checkbox {
+  padding-left: 20px;
 }
 
 
@@ -537,3 +639,11 @@ h4 {
   text-decoration: underline;
   color: black;
 }
+  /* Members Page */
+  .memberstop {
+    border-radius: 15px;
+  }
+  .membersinfo {
+    border-radius: 15px;
+  }
+
