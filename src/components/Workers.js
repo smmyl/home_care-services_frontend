@@ -53,7 +53,9 @@ const Workers = (props) => {
     <div class='page'>
         <div class='workers'>
             <div class='workerstop'>
-                <p>Non sint praesentium qui iusto rerum vel obcaecati ipsam sed inventore molestiae aut perspiciatis repellendus et dolorem nobis et voluptatem sunt. Ad voluptatibus ullam et asperiores repellat non debitis atque ea modi repudiandae in nostrum sequi eos quam velit.</p>
+            <h3>"Caring for seniors is a highly rewarding experience as it allows employees to build strong relationships with those they serve and make a positive impact on their lives."
+                           <h4>- Kyle (former employee)</h4> 
+                        </h3>
             </div>
             <div class='workersinfo'>
             {props.workers.map((worker) => {
