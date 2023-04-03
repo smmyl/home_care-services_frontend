@@ -35,10 +35,10 @@ const Home = (props) => {
       <div class="home-mid">
         <div class="homemid-info1">
           
-          <h4>"One of the things I appreciate most about this job is the relationships I have built with our clients. They have such a wealth of knowledge and experience and it is an honor to be able to learn from them and provide them with the care and support they need. Seeing the impact our services have on their lives is incredibly fulfilling and motivates me to continue doing this work."<h3>- Wes</h3></h4>
+          <h4>"One of the things I appreciate most about this job is the relationships I have built with our clients. They have such a wealth of knowledge and experience and it is an honor to be able to learn from them and provide them with the care and support they need. Seeing the impact our services have on their lives is incredibly fulfilling and motivates me to continue doing this work."<h3>- Wes (Caretaker)</h3></h4>
           </div>
         <div class="homemid-info2">
-          <h4>"The staff members are all incredibly kind, patient, and understanding, and they truly go above and beyond to make sure that my needs are met. They make me feel like I am part of their family and always take the time to chat with me and listen to my stories. I appreciate that they take the time to get to know me on a personal level, which makes me feel valued and respected. The services they provide are top-notch, and I am grateful for their help in making my life easier and more enjoyable. I would highly recommend this organization to anyone looking for reliable and compassionate care for the elderly."<h3> - Daniel</h3></h4>
+          <h4>"The staff members are all incredibly kind, patient, and understanding, and they truly go above and beyond to make sure that my needs are met. They make me feel like I am part of their family and always take the time to chat with me and listen to my stories. I appreciate that they take the time to get to know me on a personal level, which makes me feel valued and respected. The services they provide are top-notch, and I am grateful for their help in making my life easier and more enjoyable. I would highly recommend this organization to anyone looking for reliable and compassionate care for the elderly."<h3> - Daniel (Member)</h3></h4>
         </div>
       </div>
       <div class="home-bot">
