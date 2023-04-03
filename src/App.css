@@ -620,3 +620,34 @@ h4 {
 .homelink {
   text-align: center;
 }
+
+.loginpage {
+  background-color: #82b087;
+  border-color: black;
+  border-style: double;
+  height: 400px;
+  width: 350px;
+  margin: 10px auto;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.log {
+  margin:25px;
+}
+
+.log a{
+  padding: 15px;
+  font-size: 20px;
+}
+
+.log a:hover{
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loginbttn{
+  padding: 5px;
+  font-size: 20px;
+}
