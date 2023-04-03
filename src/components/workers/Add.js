@@ -35,7 +35,7 @@ const AddWorker = (props) => {
 
     return (
         <div class = 'add'>
-            <h2>Worker Sign Up Page</h2>
+            <h2>Caretaker Sign Up Page</h2>
             <form onSubmit = {handleAddWorker}>
             <div class='addinputs'>
                 <div class='addinput'>
