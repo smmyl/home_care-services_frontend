@@ -6,7 +6,6 @@ const Members = (props) => {
 
     return (
         <div class='page'>
-
             <div class='members'>
                 <div class='memberstop'>
                     <p>Non sint praesentium qui iusto rerum vel obcaecati ipsam sed inventore molestiae aut perspiciatis repellendus et dolorem nobis et voluptatem sunt. Ad voluptatibus ullam et asperiores repellat non debitis atque ea modi repudiandae in nostrum sequi eos quam velit.</p>
