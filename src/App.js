@@ -114,38 +114,38 @@ const App = () => {
     <>
       <div class='header'>
       <div class='title-cont'>
-      <a href = '#' class='company-title'>HomeCare Services</a>
+      <a onClick={showHome} class='company-title'>HomeCare Services</a>
       </div>
       <div class='nav-cont'>
       <nav className="navbar">
         <ul>
           <li>
-            <a href="#" onClick={showHome}>
+            <a onClick={showHome}>
               Home
             </a>
           </li>
           <li>
-            <a href="#" onClick={showLogin}>
+            <a onClick={showLogin}>
               Login
             </a>
           </li>
           <li>
-            <a href="#" onClick={showRegister}>
+            <a onClick={showRegister}>
               Register
             </a>
           </li>
           <li>
-            <a href="#" onClick={showWorkers}>
+            <a onClick={showWorkers}>
               Caretakers
             </a>
           </li>
           <li>
-            <a href="#" onClick={showMembers}>
+            <a onClick={showMembers}>
               Members
             </a>
           </li>
           <li>
-            <a href="#" onClick={showContact}>
+            <a class="end" onClick={showContact}>
               Contact
             </a>
           </li>
@@ -158,6 +158,7 @@ const App = () => {
           showHome={showHome}
           showContact={showContact}
           showRegister={showRegister}
+          showLogin={showLogin}
         /> 
       ): null}
 
@@ -189,6 +190,10 @@ const App = () => {
       {clickLogin ? 
       <Login 
       /> : null}
+      <footer className="footer">
+        <a href="https://github.com/francciiisco">Francisco Cardoso</a>
+        <a href="https://github.com/smmyl">Sammy Liao</a>
+      </footer>
     </>
   );
 };
