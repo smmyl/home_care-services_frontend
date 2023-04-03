@@ -8,7 +8,7 @@ const Members = (props) => {
         <div class='page'>
             <div class='members'>
                 <div class='memberstop'>
-                    <p>Our members appreciate the quality of service, ease of use and affordability that meet their needs and exceed their expectations. They value the personal attention, care, and support they receive from staff. </p>
+                    <h3 class="bluetop">Our members appreciate the quality of service, ease of use and affordability that meet their needs and exceed their expectations. They value the personal attention, care, and support they receive from staff. </h3>
                 </div>
                 {props.members.map((member) => {
                     return(
