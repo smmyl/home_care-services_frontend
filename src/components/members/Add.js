@@ -10,6 +10,7 @@ const AddMember = (props) => {
     const [clean, setClean] = useState(false)
     const [food, setFood] = useState(false)
     const [watch, setWatch] = useState(false)
+    const [image, setImage] = useState()
 
     const handleName = (event) => {
         setName(event.target.value)
@@ -35,6 +36,9 @@ const AddMember = (props) => {
     const handleAddress = (event) => {
         setAddress(event.target.value)
     }
+    const handleImage = (event) => {
+        setImage(event.target.value)
+    }
 
     //==Send data to MONGO
     const handleAddMember = (event) => {
@@ -47,7 +51,8 @@ const AddMember = (props) => {
                 clean: clean,
                 food: food,
                 watch: watch,
-            address: address
+            address: address,
+            image: image
         }).then(() => {
             props.setAdd(false)
             props.getMembers()
@@ -78,6 +83,10 @@ const AddMember = (props) => {
                 <div class='addinput' id='addaddress'>
                     <label htmlFor='address'> Address: </label>
                     <input type='text' name='address' onChange={handleAddress} />
+                </div>
+                <div class='addinput' id='addimage'>
+                    <label htmlFor='address'> Image URL: </label>
+                    <input type='text' name='image' onChange={handleImage} />
                 </div>
                 </div>
                 <div class='addservices'>

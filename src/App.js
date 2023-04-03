@@ -94,6 +94,9 @@ const App = () => {
     setClickHome(false);
   };
 
+
+
+  
   useEffect(() => {
     getMembers();
     getWorkers();
@@ -115,7 +118,7 @@ const App = () => {
           </li>
           <li>
             <a href="#" onClick={showLogin}>
-              Sign Up
+              SignUp
             </a>
           </li>
           <li>
@@ -166,6 +169,8 @@ const App = () => {
         getMembers={getMembers} 
         getWorkers={getWorkers}
         setWorkers={setWorkers}
+        showMembers={showMembers}
+        showWorkers={showWorkers}
       /> : null}
     </>
   );
