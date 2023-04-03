@@ -20,7 +20,7 @@ const Login = (props) => {
                         <img src='https://images.pexels.com/photos/2421934/pexels-photo-2421934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'></img>
                     </div>
                     <div class='logintop-info'>
-                        <p>Qui autem provident aut dicta pariatur aut omnis laudantium et ipsa laborum aut inventore internos. Et numquam reiciendis aut blanditiis nesciunt ut suscipit incidunt in error accusamus ut dolores alias sed explicabo consequatur ut debitis totam. Ut enim reiciendis aut explicabo aliquid sed quaerat nihil et accusamus fuga est velit omnis. Cum dolores aspernatur qui architecto consequuntur 33 perferendis quia ut harum iusto est tempora rerum eum aperiam aliquid.</p>
+                             <h4>Our goal at HomeCare Service is to make our sign up as user-friendly as possible. With just some quick inputs we can curate to your specific needs. Weather you are a new member or a new caretaker, we can ensure that our quality of service goes beyond expectation</h4>                   
                         <div class = 'login-a'>
                             <a onClick={showMember}>Sign Up as a Member</a>
                             <a onClick={showWorker}>Sign Up as a Caretaker</a>
