@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 248, 248);
+  background-color: #F5f5f2;
 }
 .App {
   text-align: center;
@@ -119,7 +119,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: rgb(45, 153, 241);
+  background-color: #82b087;
 }
 .home-top img {
   width: 100%;
@@ -183,7 +183,6 @@ body {
 .home-bot {
   display: flex;
   width: 100%;
-  background-color: ;
 }
 .homebot-info1 {
   display: flex;
@@ -204,7 +203,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: rgb(45, 153, 241);
+  background-color: #82b087;
 }
 .logintop-img {
   display: flex;
@@ -244,7 +243,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: white;
   height: 510px;
 }
 .loginbot-info2 {
@@ -298,7 +296,7 @@ body {
 .workerstop {
   display: flex;
   padding: 30px;
-  background-color: rgb(45, 153, 241);
+  background-color: #82b087;
 }
 .workerstop p {
   color: white;
@@ -311,7 +309,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: ghostwhite;
+  background-color: #9cc0e1;
   margin: 10px 0 10px 0;
 }
 .workerinfoinfo {
@@ -365,7 +363,7 @@ body {
 .memberstop {
   display: flex;
   padding: 30px;
-  background-color: rgb(45, 153, 241);
+  background-color: #6e8d71;
 }
 .memberstop p {
   color: white;
@@ -374,7 +372,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: ghostwhite;
+  background-color: #9cc0e1;
   margin: 10px 0 10px 0;
 }
 .membersinfoinfo {
