@@ -78,10 +78,11 @@ body {
   padding: 8px 25px;
 }
 .navbar ul li a:hover {
-  color: rgb(108, 182, 242);
+  color: #9cc0e1;
   text-decoration: underline;
   cursor: pointer;
 }
+
 /* Every Page */
 /* Title */
 .company-title {
@@ -363,7 +364,7 @@ body {
 .memberstop {
   display: flex;
   padding: 30px;
-  background-color: #6e8d71;
+  background-color: #82b087;
 }
 .memberstop p {
   color: white;
