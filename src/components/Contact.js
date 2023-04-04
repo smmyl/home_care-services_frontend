@@ -10,8 +10,7 @@ const Contact = (props) => {
           <h4 className="bluetop">
             HomeCare Services is a personal home response company that aids the
             elderly through personal care. The company's service solves an
-            elderly home security issue by giving elderly a hand to avoid
-            unforseen circumstances. Weather it be help with cleaning, food
+            elderly home security issue by providing help to the elderly in any way possible. Weather it be help with cleaning, food
             delivery or monitoring, HomeCare Services does it all.
           </h4>
           <p2>
