@@ -19,6 +19,7 @@ const Home = (props) => {
           <a onClick={props.showRegister}>Sign Up</a><br/>
           <a onClick={props.showLogin}>Login</a><br/>
           <a onClick={props.showContact}>Contact</a><br/>
+          <br/>
           <p2>
             {" "}
             or call us at <span>888-888-888</span>

@@ -191,8 +191,7 @@ const App = () => {
       <Login 
       /> : null}
       <footer className="footer">
-        <a href="https://github.com/francciiisco">Francisco Cardoso</a>
-        <a href="https://github.com/smmyl">Sammy Liao</a>
+        <p>© 2023 <a href="https://github.com/francciiisco">Francisco Cardoso |</a><a href="https://github.com/smmyl"> Sammy Liao</a></p>
       </footer>
     </>
   );

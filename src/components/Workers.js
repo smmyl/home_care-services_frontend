@@ -17,7 +17,8 @@ const Workers = (props) => {
     <div class='page'>
         <div class='workers'>
             <div class='workerstop'>
-            <h3 className='bluetop'>At HomeCare Services we strive to give the best customer service possible by having a diverse group of caretakers. We want our customers to feel at home when they recieve our services so we send our caretaker that fits their description the closest.  Our multi-cultural team of caretakers is always ready to give a helping hand, here are a handful of our team members. </h3>
+              <h3>Caretakers</h3>
+            <h4 className='bluetop'>At HomeCare Services we strive to give the best customer service possible by having a diverse group of caretakers. We want our customers to feel at home when they recieve our services so we send our caretaker that fits their description the closest.  Our multi-cultural team of caretakers is always ready to give a helping hand, here are a handful of our team members. </h4>
             </div>
             <div class='workersinfo'>
             {props.workers.map((worker) => {

@@ -41,9 +41,13 @@ body {
 }
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 /* Everything */
 body {
   font-family: 'Nunito', sans-serif;
+  background: linear-gradient(#87d0db 0%,  white 50%, white 50%,#87d0db 100%);
 }
 /* NavBar */
 .navbar {
@@ -56,12 +60,12 @@ body {
   display: flex;
   list-style: none;
   margin: 40px 0px;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .navbar ul li {
   font-size: 1rem; 
   font-weight: bold;
-background-color: rgba(226, 194, 149, 0.435);
+  background-color: rgba(226, 194, 149, 0.435);
 }
 
 .links {
@@ -84,7 +88,7 @@ background-color: rgba(226, 194, 149, 0.435);
   padding: 8px 25px;
 }
 .navbar ul li a:hover {
-  color: #ffffff;
+  color: rgb(0, 170, 249);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -92,10 +96,11 @@ background-color: rgba(226, 194, 149, 0.435);
 /* Every Page */
 /* Title */
 .company-title {
+  font-family: 'Signika Negative', sans-serif;
   margin: auto;
   text-decoration: none;
   color: black;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 .company-title:hover {
@@ -114,6 +119,7 @@ background-color: rgba(226, 194, 149, 0.435);
   padding: 10px 0 10px 30px;
 }
 .nav-cont {
+  font-family: 'Signika Negative', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -126,70 +132,74 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #82b087;
+  background: linear-gradient(#82b087 0%, #82b08780 100%);
+
 }
 .home-top img {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 .hometop-info {
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 30px 30px 30px 50px;
+  padding: 30px 50px 30px 70px;
 }
 .hometop-info p {
   color: white;
 }
 .hometop-info p2 { 
-  color: white;
+  color: black;
   margin: auto;
   padding-top: 5px;
 }
 .hometop-info span {
   font-weight: bold;
   padding-left: 5px;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1em;
 }
 .hometop-info span:hover {
-  color: black;
+  color: rgb(0, 170, 249);
   text-decoration: underline;
   cursor: pointer;
 }
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 .hometop-info a {
+  font-family: 'Secular One', sans-serif;
   text-decoration: none;
-  color: white;
+  color: black;
   margin: 5px auto 5px auto;
-  font-weight: bold;
+  font-size: 1.3em;
   cursor: pointer;
 }
 .hometop-info a:hover {
   text-decoration: underline;
-  color: black;
+  color: rgb(0, 170, 249);
 }
 .hometop-img {
   display: flex;
   width: 50%;
   justify-content: right;
   margin: auto;
-  padding: 30px 50px 30px 30px;
+  padding: 30px 70px 30px 50px;
 }
 .home-mid {
   display: flex;
   width: 100%;
   border-radius: 15px;
+  background:linear-gradient(rgba(226, 194, 149, 0.474) 0%, rgb(226, 194, 149) 100%);
 }
 .homemid-info1 {
   display: flex;
   width: 50%;
-  padding: 30px 50px 30px 30px;
-  background-color: white
+  padding: 30px 70px 30px 50px;
 }
 .homemid-info2 {
   display: flex;
   width: 50%;
-  padding: 30px 30px 30px 50px;
-  background-color: rgb(226, 194, 149);
+  padding: 30px 50px 30px 70px;
 }
 .home-bot {
   display: flex;
@@ -215,7 +225,7 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #82b087;
+  background: linear-gradient(#82b087 0%, #82b08741 100%);
 }
 .regtop-img {
   display: flex;
@@ -225,12 +235,12 @@ background-color: rgba(226, 194, 149, 0.435);
 .regtop-img img{
   width: 80%;
   border-radius: 15px;
-  margin: 30px 30px 30px 50px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  margin: 30px 50px 30px 70px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.212);
 }
 .regtop-info {
   width: 50%;
-  margin: 30px 50px 30px 30px;
+  padding: 30px 150px 30px 130px;
   display: flex;
   flex-direction: column;
 }
@@ -239,25 +249,27 @@ background-color: rgba(226, 194, 149, 0.435);
 }
 .regtop-info a {
   text-decoration: none;
-  color: white;
+  color: black;
   margin: auto;
   font-weight: bold;
 }
 .regtop-info a:hover {
   text-decoration: underline;
-  color: black;
+  color: rgb(0, 170, 249);
   cursor: pointer;
 }
 .reg-a {
   display: flex;
   flex-direction: column;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.3em;
+  font-weight: lighter;
 }
 .regbot-info {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 510px;
-  background-color: rgb(226, 194, 149) ;
+  background:linear-gradient(rgba(226, 194, 149, 0.474) 0%, rgb(226, 194, 149) 100%);
 }
 .regbot-info2 {
   display: flex;
@@ -276,7 +288,9 @@ background-color: rgba(226, 194, 149, 0.435);
 .addinputs {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
 }
 .addinput {
   padding: 5px 10px 5px 0;
@@ -287,14 +301,18 @@ background-color: rgba(226, 194, 149, 0.435);
 .addservices {
   display: flex;
   flex-direction: column;
-  width: 100%;
   font-weight: bold;
+  width: 60%;
+  margin: auto;
 }
 .addservicesinput {
   padding-left: 50px;
 }
 .addservicesinput label {
   font-weight: bold;
+}
+.reg input {
+  display: flex;
 }
 #addage input {
   width: 40px;
@@ -310,7 +328,8 @@ background-color: rgba(226, 194, 149, 0.435);
 .workerstop {
   display: flex;
   padding: 30px;
-  background-color: #82b087;
+  background: linear-gradient(#82b087 0%, #82b08741 100%);
+  flex-direction: column;
 }
 .workerstop p {
   color: white;
@@ -329,13 +348,13 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   width: 50%;
   flex-direction: column;
-  margin: 30px 30px 30px 50px;
-  padding: 10px 10px 10px 10px;
-  background-color: rgb(239, 248, 239);
+  margin: 30px 80px 30px 100px;
+  padding: 25px 25px 25px 25px;
+  background:linear-gradient(rgb(239, 248, 239) 0%, rgba(239, 248, 239, 0.431) 100%);
   border-radius: 15px;
   flex-wrap: wrap;
   line-height: 1px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 .workerinfoinfo button {
   width: 50px;
@@ -351,7 +370,7 @@ background-color: rgba(226, 194, 149, 0.435);
   margin: 30px 50px 30px 30px;
   border-radius: 15px;
   border: 3px solid black;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 .workereditinfo {
   display: flex;
@@ -378,7 +397,7 @@ background-color: rgba(226, 194, 149, 0.435);
 .memberstop {
   display: flex;
   padding: 30px;
-  background-color: #82b087;
+  background: linear-gradient(#82b087 0%, #82b08741 100%);
 }
 .memberstop p {
   color: white;
@@ -393,13 +412,13 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   width: 50%;
   flex-direction: column;
-  margin: 30px 30px 30px 50px;
-  padding: 10px 10px 10px 10px;
-  background-color: rgb(239, 248, 239);
+  margin: 30px 80px 30px 100px;
+  padding: 25px 25px 25px 25px;
+  background:linear-gradient(rgb(239, 248, 239) 0%, rgba(239, 248, 239, 0.431) 100%);
   border-radius: 15px;
   flex-wrap: wrap;
   line-height: 1px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 .membersinfoinfo button {
   width: 50px;
@@ -408,6 +427,7 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   width: 50%;
   flex-direction: column;
+  margin: auto;
 }
 .membersinfoimage img {
   max-width: 80%;
@@ -415,7 +435,7 @@ background-color: rgba(226, 194, 149, 0.435);
   margin: 30px 50px 30px 30px;
   border-radius: 15px;
   border: 3px solid black;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.212);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 .memberseditinfo {
   display: flex;
@@ -423,6 +443,9 @@ background-color: rgba(226, 194, 149, 0.435);
   width: 50%;
   padding: 30px 30px 30px 50px;
   flex-wrap: wrap;
+}
+.memberseditinfo {
+  font-weight: 600;
 }
 .memberseditbtn {
   display: flex;
@@ -441,7 +464,7 @@ background-color: rgba(226, 194, 149, 0.435);
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 30px 30px 30px 0;
+  padding: 70px 30px 30px 0;
 }
 .editmembersform {
   display: flex;
@@ -492,14 +515,14 @@ background-color: rgba(226, 194, 149, 0.435);
     font-size: 1.5em;
   }
   .hometop-info a:hover {
-    color: rgb(108, 213, 108);
+    color: rgb(0, 170, 249);
   }
   .hometop-info p {
     padding: 30px;
     color: black;
   }
   .hometop-info span:hover {
-    color: rgb(108, 213, 108);
+    color: rgb(0, 170, 249);
   }
   .hometop-info p2 {
     padding: 30px;
@@ -531,12 +554,12 @@ background-color: rgba(226, 194, 149, 0.435);
     border: 5px solid black;
   }
   .regtop-info {
-    width: 100%;
-    margin: 0;
-    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 91%;
+    padding: 30px;
+    background-color: rgb(236, 236, 249);
   }
   .regtop-info p {
-    padding: 30px;
     color: rgb(255, 255, 255);
   }
   .regtop-info a {
@@ -547,7 +570,7 @@ background-color: rgba(226, 194, 149, 0.435);
     margin-bottom: 50px;
   }
   .regtop-info a:hover {
-    color: rgb(108, 213, 108);
+    color: rgb(0, 170, 249);
   }
   .addinputs {
     flex-direction: column;
@@ -563,48 +586,17 @@ background-color: rgba(226, 194, 149, 0.435);
     width: 1200px;
     margin: auto;
   }
-  /* Home Page */
-  .home-top {
-    border-radius: 15px;
-  }
-  .home-mid {
-    border-radius: 15px;
-  }
-  .home-bott {
-    border-radius: 15px;
-  }
-  /* reg Page */
-  .regtop {
-    border-radius: 15px;
-  }
-  .regbot-info {
-    border-radius: 15px;
-  }
-  /* Caretaker Page */
-  .workerstop {
-    border-radius: 15px;
-  }
-  .workerinfo {
-    border-radius: 15px;
-  }
-  .homemid-info2 {
-    border-radius: 15px;
-  }
-  .homemid-info1 {
-    border-radius: 15px;
-  }
-  .home-bot {
-    border-radius: 15px;
-  }
-  .logbox {
-    border-radius: 15px;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-  }
 
 }
 
 h3 {
   text-align: center;
+  font-family: 'Signika Negative', sans-serif;
+}
+
+h2 {
+  font-family: 'Secular One', sans-serif;
+  font-weight: lighter;
 }
 
 .hours {
@@ -614,6 +606,13 @@ h3 {
 
 h4 {
   text-align: center;
+  font-weight: lighter;
+}
+.workersinfo h4 {
+  font-weight: bold;
+}
+.membersinfo h4 {
+  font-weight: bold;
 }
 .home-mid {
   
@@ -637,25 +636,23 @@ h4 {
   /* Members Page */
   .memberstop {
     border-radius: 15px;
-  }
-  .membersinfo {
-    border-radius: 15px;
+    flex-direction: column;
   }
 
 .bluetop {
-  color: white;
+  color: black;
 }
 .homelink {
   text-align: center;
 }
 .logbox {
-  background-color: rgb(226, 194, 149);
+  background: linear-gradient(#82b087 0%,  rgb(226, 194, 149) 50%, rgb(226, 194, 149) 50%,#82b087 100%);
   height: 700px;
   display:flex;
   margin-top: 15px;
 }
 .loginpage {
-  background-color: #82b087;
+  background: linear-gradient(#82b087 0%, transparent 100%);
   border-color: rgb(0, 0, 0);
   border-style: double;
   height: 400px;
@@ -663,7 +660,7 @@ h4 {
   margin: 10px auto;
   text-align: center;
   margin-top: 130px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.278);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.278);
 }
 
 .log {
@@ -676,7 +673,7 @@ h4 {
 }
 
 .log a:hover{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 170, 249);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -687,16 +684,34 @@ h4 {
 }
 
 .footer {
-  margin: 10px;
   text-align: center;
 }
 
 .footer a {
-  padding: 0 50px;
   text-decoration: none;
   color: black;
+  font-family: 'Signika Negative', sans-serif;
 }
 
 .footer a:hover {
   color:#82b087;
+}
+@keyframes slideInRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.quote {
+  font-size: 2em;
 }
