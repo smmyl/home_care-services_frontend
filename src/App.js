@@ -23,12 +23,12 @@ const App = () => {
 
   // ==Get Data
   const getMembers = () => {
-    axios.get("http://localhost:3000/members").then((response) => {
+    axios.get("https://home-care-services-backend.herokuapp.com/members").then((response) => {
       setMembers(response.data);
     });
   };
   const getWorkers = () => {
-    axios.get("http://localhost:3000/workers").then((response) => {
+    axios.get("https://home-care-services-backend.herokuapp.com/workers").then((response) => {
       setWorkers(response.data);
     });
   };
