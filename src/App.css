@@ -56,11 +56,12 @@ body {
   display: flex;
   list-style: none;
   margin: 40px 0px;
+   flex-wrap: wrap;
 }
 .navbar ul li {
   font-size: 1rem; 
   font-weight: bold;
-background-color: rgba(98, 58, 58, 0.4);
+background-color: rgba(226, 194, 149, 0.435);
 }
 
 .links {
@@ -586,6 +587,19 @@ background-color: rgba(98, 58, 58, 0.4);
   .workerinfo {
     border-radius: 15px;
   }
+  .homemid-info2 {
+    border-radius: 15px;
+  }
+  .homemid-info1 {
+    border-radius: 15px;
+  }
+  .home-bot {
+    border-radius: 15px;
+  }
+  .logbox {
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+  }
 
 }
 
@@ -673,7 +687,7 @@ h4 {
 }
 
 .footer {
-  margin: 20px;
+  margin: 10px;
   text-align: center;
 }
 
