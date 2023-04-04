@@ -12,16 +12,14 @@ const Home = (props) => {
         <div class="hometop-info">
           <h4 className="bluetop">
           Our company feels a great sense of fulfillment and purpose in serving 
-          the elderly and giving back to those who have already contributed so 
-          much to society. There is a deep respect and admiration for the wisdom, 
-          experience, and knowledge that the elderly possess. Helping to improve the lives of our 
-          seniors can be a rewarding experience, as it allows us to express gratitude 
-          for all that they have done and to make a positive impact on their quality of life.
+          the elderly and giving back to those in need of a helping hand. At our company we strive to give the best customer service possible by being available every day of the week. 
+           Contact us today and se how you can take your first step towards joing our community at HomeCare Services.
           </h4>
           <p className="homelink">
           <a onClick={props.showRegister}>Sign Up</a><br/>
-          <a onClick=''>Login</a><br/>
+          <a onClick={props.showLogin}>Login</a><br/>
           <a onClick={props.showContact}>Contact</a><br/>
+          <br/>
           <p2>
             {" "}
             or call us at <span>888-888-888</span>
